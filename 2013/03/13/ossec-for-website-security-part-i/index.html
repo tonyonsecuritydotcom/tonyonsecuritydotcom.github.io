@@ -4,21 +4,23 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
-        <title>Tony On Security</title>
-        <meta name="description" content="Tony On Security is a blog about everything that relates to security, hacking news, and cryptocurrencies.">
+        <title>OSSEC for Website Security | Tony On Security</title>
+        <meta name="description"
+        content="OSSEC is a free, open-source host-based intrusion detection system.">
         <link rel="icon" type="image/png" href="https://www.tonyonsecurity.com/assets/images/favicon.png">
-        <link rel="canonical" href="https://www.tonyonsecurity.com/blog/" />
+        <link rel="canonical" href="https://www.tonyonsecurity.com/2013/03/13/ossec-for-website-security-part-i/"
+        />
         <link rel="alternate" type="application/rss+xml" href="https://www.tonyonsecurity.com/rss.xml"
         title=" Feed">
-        <meta property="og:description" content="Tony On Security is a blog about everything that relates to security, hacking news, and cryptocurrencies.">
-        <meta property="og:image" content="https://www.tonyonsecurity.com/assets/pictures/blog/business-agility-trends-for-2021/agile-post-it-cards-1200.jpg">
-        <meta property="og:image:alt" content="">
+        <meta property="og:description" content="OSSEC is a free, open-source host-based intrusion detection system.">
+        <meta property="og:image" content="https://www.tonyonsecurity.com/assets/pictures/2013/03/13/ossec-for-website-security-part-i/ossec-logo-1200.jpg">
+        <meta property="og:image:alt" content="OSSEC written on a white background.">
         <meta property="og:image:height" content="741">
         <meta property="og:image:width" content="1200">
         <meta property="og:site_name" content="Tony On Security">
-        <meta property="og:title" content="Tony On Security">
+        <meta property="og:title" content="OSSEC for Website Security | Tony On Security">
         <meta property="og:type" content="article">
-        <meta property="og:url" content="https://www.tonyonsecurity.com/blog/">
+        <meta property="og:url" content="https://www.tonyonsecurity.com/2013/03/13/ossec-for-website-security-part-i/">
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:creator" content="@tonyonsecur1ty">
         <meta name="twitter:site" content="@tonyonsecur1ty">
@@ -757,6 +759,74 @@
         
                     }
         </script>
+        <script type="application/ld+json">
+            {
+                "@context": "http://schema.org",
+                "@type": "BreadcrumbList",
+                "@id": "https://www.tonyonsecurity.com/2013/03/13/ossec-for-website-security-part-i/#breadcrumbs",
+                "itemListElement": [
+        
+                                {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Tony On Security",
+                        "item": "https://www.tonyonsecurity.com//"
+        
+                                    },
+        
+                                {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Blog",
+                        "item": "https://www.tonyonsecurity.com/blog/"
+        
+                                    },
+        
+                                {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "OSSEC for Website Security"
+                    }
+                ]
+            }
+        </script>
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@id": "https://www.tonyonsecurity.com/2013/03/13/ossec-for-website-security-part-i/",
+                "@type": "BlogPosting",
+                "headline": "OSSEC for Website Security",
+                "description": "OSSEC is a free, open-source host-based intrusion detection system.",
+                "image": [{
+                    "@type": "ImageObject",
+                    "url": "https://www.tonyonsecurity.com/assets/pictures/2013/03/13/ossec-for-website-security-part-i/ossec-logo-1200x1200.jpg",
+                    "height": "1200px",
+                    "width": "1200px",
+                    "caption": ""
+                }, {
+                    "@type": "ImageObject",
+                    "url": "https://www.tonyonsecurity.com/assets/pictures/2013/03/13/ossec-for-website-security-part-i/ossec-logo-1200x900.jpg",
+                    "height": "900px",
+                    "width": "1200px",
+                    "caption": ""
+                }, {
+                    "@type": "ImageObject",
+                    "url": "https://www.tonyonsecurity.com/assets/pictures/2013/03/13/ossec-for-website-security-part-i/ossec-logo-1200x675.jpg",
+                    "height": "675",
+                    "width": "1200px",
+                    "caption": ""
+                }],
+                "datePublished": "2013-03-13",
+                "dateModified": "2013-03-13",
+                "author": {
+                    "@id": "https://www.tonyonsecurity.com/#people/tony_fox"
+                },
+                "publisher": {
+                    "@id": "https://www.tonyonsecurity.com/#organization"
+                },
+                "mainEntityOfPage": "https://www.tonyonsecurity.com/2013/03/13/ossec-for-website-security-part-i/"
+            }
+        </script>
         <script>
             if(sessionStorage&&sessionStorage.fontsLoaded) {
           var html = document.documentElement;
@@ -789,190 +859,117 @@
                 </header>
             </div>
             <div class="main-content-outer">
-                <nav class="toc"></nav>
+                <nav class="toc">
+                     <h3>Table of contents</h3>
+
+                    <ul>
+                        <li class="h1"><a href="#ossec-for-website-security">OSSEC for Website Security</a>
+                        </li>
+                    </ul>
+                </nav>
+                <script>
+                    window.addEventListener('DOMContentLoaded', () => {
+                      const observer = new IntersectionObserver(entries => {
+                        entries.forEach(entry => {
+                          const id = entry.target.getAttribute('id');
+                          const elements = document.querySelector(`nav ul li a[href="#${id}"]`);
+                          if (entry.intersectionRatio > 0) {
+                            elements.parentElement.classList.add('selected');
+                          } else {
+                            elements.parentElement.classList.remove('selected');
+                          }
+                        });
+                      });
+                    
+                      const articles = document.querySelectorAll('article[id]');
+                      if(articles) {
+                        articles.forEach((section) => { observer.observe(section); });
+                      }
+                    
+                      const h1s = document.querySelectorAll('h1[id]');
+                      if(h1s) {
+                        h1s.forEach((section) => { observer.observe(section); });
+                      }
+                      const h2s = document.querySelectorAll('h2[id]');
+                      if(h2s) {
+                        h2s.forEach((section) => { observer.observe(section); });
+                      }
+                      const h3s = document.querySelectorAll('h3[id]');
+                      if(h3s) {
+                        h3s.forEach((section) => { observer.observe(section); });
+                      }
+                    });
+                </script>
                 <main class="main-content">
                     <article>
                         <div class="page-header-outer">
                             <header class="page-header">
-                                 <h1 id="tony-on-security">Tony On Security</h1>
+                                 <h1 id="ossec-for-website-security">OSSEC for Website Security</h1>
 
+                                <aside class="meta">
+                                    <div class="author-photo">
+                                        <img alt="The picture of Tony Fox" src="https://www.tonyonsecurity.com/assets/images/tony_fox_64x64.jpg"
+                                        srcset="https://www.tonyonsecurity.com/assets/images/tony_fox_128x128.jpg 2x">
+                                    </div>
+                                    <div class="info"> <span class="author-name">Tony Fox</span>
+ <span class="published-date">Mar 13th, 2013</span>
+
+                                    </div>
+                                </aside>
                             </header>
                         </div>
                         <div class="post-body-outer">
                             <div class="post-body">
                                 <div class="post-body-inner">
-                                    <div>
-                                        <p>Tony On Security is a blog about everything that relates to security,
-                                            hacking news, and cryptocurrencies.</p>
-                                        <nav class="index-post-items"> <a class="index-post-item-link" href="https://www.tonyonsecurity.com/2013/03/13/ossec-for-website-security-part-i/">
-    <div class="index-post-item">
-        <div class="thumbnail">
-            <img src="https://www.tonyonsecurity.com/assets/pictures/2013/03/13/ossec-for-website-security-part-i/ossec-logo-800.jpg"/>
-        </div>
-        <div class="meta">
-            <h3 class="category">Detection</h3>
-            <h4 class="title"   >OSSEC for Website Security</h4>
-            <p  class="excerpt" >OSSEC is a free, open-source host-based intrusion detection system.</p>
-            <div class="bs">
-                <div class="author-photo">
-                    <img alt="The picture of Tony Fox"
-                         src="/assets/images/tony_fox_64x64.jpg"
-                         srcset="/assets/images/tony_fox_128x128.jpg 2x">
-                </div>
-                <div class="info">
-                    <span class="author-name">Tony Fox</span>
-                    <span class="published-date">Mar 13th, 2013</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</a>
- <a class="index-post-item-link" href="https://www.tonyonsecurity.com/2013/03/09/protect-your-website-vulnerabilities-with-a-waf-new-compairson-report-cloudflare-vs-incapsula-vs-modsecurity/">
-    <div class="index-post-item">
-        <div class="thumbnail">
-            <img src="https://www.tonyonsecurity.com/assets/pictures/2013/03/09/protect-your-website-vulnerabilities-with-a-waf-new-compairson-report-cloudflare-vs-incapsula-vs-modsecurity/cloudflare-waf-800.jpg"/>
-        </div>
-        <div class="meta">
-            <h3 class="category">Firewall</h3>
-            <h4 class="title"   >Protect Your Website Vulnerabilities with CloudFlare WAF</h4>
-            <p  class="excerpt" >Protect your business-critical web applications against harmful assaults with this intelligent, integrated, and scalable solution.</p>
-            <div class="bs">
-                <div class="author-photo">
-                    <img alt="The picture of Tony Fox"
-                         src="/assets/images/tony_fox_64x64.jpg"
-                         srcset="/assets/images/tony_fox_128x128.jpg 2x">
-                </div>
-                <div class="info">
-                    <span class="author-name">Tony Fox</span>
-                    <span class="published-date">Mar 9th, 2013</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</a>
- <a class="index-post-item-link" href="https://www.tonyonsecurity.com/2012/10/16/2012-ncsa-symantec-national-small-business-cyber-security-study/">
-    <div class="index-post-item">
-        <div class="thumbnail">
-            <img src="https://www.tonyonsecurity.com/assets/pictures/2012/10/16/2012-ncsa-symantec-national-small-business-cyber-security-study/stay-safe-online-800.jpg"/>
-        </div>
-        <div class="meta">
-            <h3 class="category">Report</h3>
-            <h4 class="title"   >Publication of a study on small business cybersecurity</h4>
-            <p  class="excerpt" >Symantec and the National Cyber Security Alliance issued a report last week on small company cybersecurity, this article summarizes the findings.</p>
-            <div class="bs">
-                <div class="author-photo">
-                    <img alt="The picture of Tony Fox"
-                         src="/assets/images/tony_fox_64x64.jpg"
-                         srcset="/assets/images/tony_fox_128x128.jpg 2x">
-                </div>
-                <div class="info">
-                    <span class="author-name">Tony Fox</span>
-                    <span class="published-date">Oct 16th, 2012</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</a>
- <a class="index-post-item-link" href="https://www.tonyonsecurity.com/2012/10/09/ossec-agent-to-server-connection-issues/">
-    <div class="index-post-item">
-        <div class="thumbnail">
-            <img src="https://www.tonyonsecurity.com/assets/pictures/2012/10/09/ossec-agent-to-server-connection-issues/ossec-logo-800.jpg"/>
-        </div>
-        <div class="meta">
-            <h3 class="category">Detection</h3>
-            <h4 class="title"   >OSSEC Agent to Server Connection Issues</h4>
-            <p  class="excerpt" >If you are having issues with ossec, the first thing to do is look at your logs.</p>
-            <div class="bs">
-                <div class="author-photo">
-                    <img alt="The picture of Tony Fox"
-                         src="/assets/images/tony_fox_64x64.jpg"
-                         srcset="/assets/images/tony_fox_128x128.jpg 2x">
-                </div>
-                <div class="info">
-                    <span class="author-name">Tony Fox</span>
-                    <span class="published-date">Oct 9th, 2012</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</a>
- <a class="index-post-item-link" href="https://www.tonyonsecurity.com/2012/06/24/installing-wordpress-via-terminal-and-securing-the-server/">
-    <div class="index-post-item">
-        <div class="thumbnail">
-            <img src="https://www.tonyonsecurity.com/assets/pictures/2012/06/24/installing-wordpress-via-terminal-and-securing-the-server/wordpress-logo-800.jpg"/>
-        </div>
-        <div class="meta">
-            <h3 class="category">Wordpress</h3>
-            <h4 class="title"   >Installing WordPress via Terminal and Securing The Server</h4>
-            <p  class="excerpt" >This post will provide a cradle to a grave review of the process. It will include everything from configuring the server to installing and finally hardening.</p>
-            <div class="bs">
-                <div class="author-photo">
-                    <img alt="The picture of Tony Fox"
-                         src="/assets/images/tony_fox_64x64.jpg"
-                         srcset="/assets/images/tony_fox_128x128.jpg 2x">
-                </div>
-                <div class="info">
-                    <span class="author-name">Tony Fox</span>
-                    <span class="published-date">Jun 24th, 2012</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</a>
- <a class="index-post-item-link" href="https://www.tonyonsecurity.com/2012/06/28/security-hole-found-keepass-password-manager/">
-    <div class="index-post-item">
-        <div class="thumbnail">
-            <img src="https://www.tonyonsecurity.com/assets/pictures/2012/06/28/security-hole-found-keepass-password-manager/keepass-logo-800.jpg"/>
-        </div>
-        <div class="meta">
-            <h3 class="category">Vulnerability</h3>
-            <h4 class="title"   >Researcher alerts the public to KeePass's security flaw</h4>
-            <p  class="excerpt" >Private security researcher claims to have found a remotely exploitable security weakness in KeePass, the free, open-source password manager.</p>
-            <div class="bs">
-                <div class="author-photo">
-                    <img alt="The picture of Tony Fox"
-                         src="/assets/images/tony_fox_64x64.jpg"
-                         srcset="/assets/images/tony_fox_128x128.jpg 2x">
-                </div>
-                <div class="info">
-                    <span class="author-name">Tony Fox</span>
-                    <span class="published-date">Jun 28th, 2012</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</a>
- <a class="index-post-item-link" href="https://www.tonyonsecurity.com/2012/08/05/securing-your-data-on-dropbox-truecrypt/">
-    <div class="index-post-item">
-        <div class="thumbnail">
-            <img src="https://www.tonyonsecurity.com/assets/pictures/2012/08/05/securing-your-data-on-dropbox-truecrypt/truecrypt-security-audit-services-800.jpg"/>
-        </div>
-        <div class="meta">
-            <h3 class="category">Cloud</h3>
-            <h4 class="title"   >Using TrueCrypt to Secure Dropbox Data</h4>
-            <p  class="excerpt" >Your data is often stored on the cloud, and it's hard to imagine that this will change. It raises security problems, as seen by the latest Dropbox hack.</p>
-            <div class="bs">
-                <div class="author-photo">
-                    <img alt="The picture of Tony Fox"
-                         src="/assets/images/tony_fox_64x64.jpg"
-                         srcset="/assets/images/tony_fox_128x128.jpg 2x">
-                </div>
-                <div class="info">
-                    <span class="author-name">Tony Fox</span>
-                    <span class="published-date">Aug 5th, 2012</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</a>
-
-                                        </nav>
-                                    </div>
+                                    <p><a href="https://www.ossec.net/">OSSEC</a> is a free, open-source host-based
+                                        intrusion detection system. It performs log analysis, integrity checking,
+                                        Windows registry monitoring, rootkit detection, time-based alerting, and
+                                        active response.</p>
+                                    <aside>
+                                        <figure class="full-width-figure  featured">
+                                            <picture>
+                                                <source type="image/webp" srcset="
+              https://www.tonyonsecurity.com/assets/pictures/2013/03/13/ossec-for-website-security-part-i/ossec-logo-800.webp 800w,
+              https://www.tonyonsecurity.com/assets/pictures/2013/03/13/ossec-for-website-security-part-i/ossec-logo-1200.webp 1200w,
+              https://www.tonyonsecurity.com/assets/pictures/2013/03/13/ossec-for-website-security-part-i/ossec-logo-1600.webp 1600w"
+                                                sizes="
+              (max-width: 800px) 100vw,
+              800px" />
+                                                <source type="image/jpeg" srcset="
+              https://www.tonyonsecurity.com/assets/pictures/2013/03/13/ossec-for-website-security-part-i/ossec-logo-800.jpg 800w,
+              https://www.tonyonsecurity.com/assets/pictures/2013/03/13/ossec-for-website-security-part-i/ossec-logo-1200.jpg 1200w,
+              https://www.tonyonsecurity.com/assets/pictures/2013/03/13/ossec-for-website-security-part-i/ossec-logo-1600.jpg 1600w"
+                                                sizes="
+              (max-width: 800px) 100vw,
+              800px" />
+                                                <img src="https://www.tonyonsecurity.com/assets/pictures/2013/03/13/ossec-for-website-security-part-i/ossec-logo-800.jpg"
+                                                alt="OSSEC written on a white background." />
+                                            </picture>
+                                            <figcaption>Picture from <a href="https://www.ossec.net/" rel="nofollow">ossec.net</a>
+                                            </figcaption>
+                                        </figure>
+                                    </aside>
+                                    <p>It has different tiers, for professional users.</p>
+                                    <p>By joining with OSSEC+, you have access to extra features for free. Atomic
+                                        OSSEC for Enterprise, built on OSSEC’s open source basis, increases the
+                                        capabilities to meet the needs of today’s enterprises. For security operations
+                                        centers, it offers sophisticated SIEM log filtering that lowers noise and
+                                        a small footprint that doesn’t break the bank.</p>
+                                    <p>OSSEC, the world’s most popular open source server intrusion detection
+                                        system, now has clustering, agent management, reporting, security, vulnerability
+                                        management, third party integration, and compliance capabilities.</p>
+                                    <h2
+                                    id="installation">Installation</h2>
+                                        <p>It’s not the easiest to install, check the official website for <a href="https://www.ossec.net/docs/docs/manual/installation/index.html">detailed instructions</a>.</p>
                                 </div>
                             </div>
                         </div>
                     </article>
                 </main>
+                <nav class="post-items">
+                     <h3>Top posts</h3>
+
+                </nav>
             </div>
             <aside class="site-footer-outer">
                 <footer class="site-footer">

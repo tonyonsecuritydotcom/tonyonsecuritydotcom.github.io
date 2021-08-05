@@ -2,7 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://www.tonyonsecurity.com/</loc>
-        <lastmod>2021-08-04</lastmod>
+        <lastmod>2021-08-05</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://www.tonyonsecurity.com/blog/</loc>
+        <lastmod>2021-08-05</lastmod>
         <changefreq>daily</changefreq>
     </url>
     <url>
@@ -23,6 +28,26 @@
     <url>
         <loc>https://www.tonyonsecurity.com/2012/06/28/security-hole-found-keepass-password-manager/</loc>
         <lastmod>2021-08-04</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://www.tonyonsecurity.com/2013/03/13/ossec-for-website-security-part-i/</loc>
+        <lastmod>2021-08-05</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://www.tonyonsecurity.com/2013/03/09/protect-your-website-vulnerabilities-with-a-waf-new-compairson-report-cloudflare-vs-incapsula-vs-modsecurity/</loc>
+        <lastmod>2021-08-05</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://www.tonyonsecurity.com/2012/10/16/2012-ncsa-symantec-national-small-business-cyber-security-study/</loc>
+        <lastmod>2021-08-05</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://www.tonyonsecurity.com/2012/10/09/ossec-agent-to-server-connection-issues/</loc>
+        <lastmod>2021-08-05</lastmod>
         <changefreq>daily</changefreq>
     </url>
 </urlset>
