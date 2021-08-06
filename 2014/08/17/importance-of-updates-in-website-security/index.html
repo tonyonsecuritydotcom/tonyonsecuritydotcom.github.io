@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Importance of Updates in Website Security | Tony On Security</title>
+        <meta
+        name="description" content="Security patches are often used in computers and other electronic devices that get software updates when they become available.">
+            <link rel="icon" type="image/png" href="https://www.tonyonsecurity.com/assets/images/favicon.png">
+            <link rel="canonical" href="https://www.tonyonsecurity.com/2014/08/17/importance-of-updates-in-website-security/"
+            />
+            <link rel="alternate" type="application/rss+xml" href="https://www.tonyonsecurity.com/rss.xml"
+            title=" Feed">
+            <meta property="og:description" content="Security patches are often used in computers and other electronic devices that get software updates when they become available.">
+            <meta property="og:image" content="https://www.tonyonsecurity.com/assets/pictures/2014/08/17/importance-of-updates-in-website-security/laptop-updating-itself-1200.jpg">
+            <meta property="og:image:alt" content="A laptop is running it's updates.">
+            <meta property="og:image:height" content="741">
+            <meta property="og:image:width" content="1200">
+            <meta property="og:site_name" content="Tony On Security">
+            <meta property="og:title" content="Importance of Updates in Website Security | Tony On Security">
+            <meta property="og:type" content="article">
+            <meta property="og:url" content="https://www.tonyonsecurity.com/2014/08/17/importance-of-updates-in-website-security/">
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:creator" content="@tonyonsecur1ty">
+            <meta name="twitter:site" content="@tonyonsecur1ty">
+            <script async src="https://www.googletagmanager.com/gtag/js?id=UA-170847243-6"></script>
+            <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                
+                gtag('config', 'UA-170847243-6');
+                
+                var linkGtag = function(id, url) {
+                  gtag('event', 'click', {
+                    'event_category': 'click',
+                    'event_label': id,
+                    'transport_type': 'beacon',
+                    'event_callback': function(){ document.location = url; }
+                  });
+                }
+            </script>
+            <style>
+                /*** normalize.css */
+                * {
+                    margin: 0;
+                    padding: 0;
+                    box-sizing: border-box;
+                }
+                
+                  /*** fonts.css */
+                @font-face {
+                  font-family: 'Inter';
+                  font-style: normal;
+                  font-weight: 300;
+                  src: url(https://www.tonyonsecurity.com/assets/fonts/inter_300.woff) format('woff'), url(https://www.tonyonsecurity.com/assets/fonts/inter_300.ttf) format('truetype');
+                  font-display: swap;
+                }
+                @font-face {
+                  font-family: 'Inter';
+                  font-style: normal;
+                  font-weight: 400;
+                  src: url(https://www.tonyonsecurity.com/assets/fonts/inter_400.woff) format('woff'), url(https://www.tonyonsecurity.com/assets/fonts/inter_400.ttf) format('truetype');
+                  font-display: swap;
+                }
+                @font-face {
+                  font-family: 'Inter';
+                  font-style: normal;
+                  font-weight: 700;
+                  src: url(https://www.tonyonsecurity.com/assets/fonts/inter_700.woff) format('woff'), url(https://www.tonyonsecurity.com/assets/fonts/inter_700.ttf) format('truetype');
+                  font-display: swap;
+                }
+                  html {
+                  scroll-behavior: smooth;
+                }
+                body {
+                  font-family: sans-serif;
+                  letter-spacing: 0.5px;
+                }
+                .fonts-loaded body {
+                  font-family: "Inter", sans-serif;
+                  letter-spacing: 0px;
+                }
+                h1,
+                h2,
+                h3,
+                h4,
+                strong,
+                .site-navigation {
+                  font-weight: 700;
+                }
+                body {
+                  color: #000000;
+                  background-color: #ffffff;
+                }
+                a {
+                  color: #000000;
+                  text-decoration: underline dashed #007aff;
+                }
+                /*** generic custom stuff */
+                .logo-line,
+                .important-span,
+                .important-span a {
+                  color: #007aff;
+                }
+                /*** site-header / footer*/
+                .site-header-outer {
+                  border-bottom: 1px solid #C7DFF3;
+                }
+                .site-footer-outer {
+                    border-top: 1px solid #C7DFF3;
+                    background-color: #f8f9fa;
+                }
+                .site-header,
+                .site-footer {
+                  width: 100%;
+                  margin: 0 auto;
+                  display: flex;
+                  position: relative;
+                  justify-content: space-between;
+                  align-items: center;
+                }
+                .site-header a,
+                .site-footer a {
+                  text-decoration: none;
+                }
+                .site-navigation nav ul {
+                  list-style: none;
+                  display: flex;
+                }
+                
+                /*** images */
+                .full-width-figure img,
+                .simple-img img {
+                  width: 100%;
+                  height: 61.75vw;
+                }
+                .full-width-figure figcaption a,
+                .simple-img figcaption a {
+                  color: #818181;
+                }
+                figcaption {
+                  text-align: center;
+                  font-weight: 300;
+                  color: #818181;
+                }
+                
+                /*** post items */
+                .post-items a {
+                  text-decoration: none;
+                }
+                .post-items h4 {
+                  margin-top: 0px;
+                  margin-bottom: 0px;
+                }
+                .top-post-item {
+                  display: flex;
+                }
+                .post-item-outer {
+                  border-bottom: 1px dotted #C7DFF3;
+                }
+                .post-item-link {
+                  text-decoration: none;
+                }
+                
+                .top-post-item .thumbnail {
+                  width: 80px;
+                  height: 80px;
+                  opacity: 0.85;
+                }
+                
+                .top-post-item .thumbnail:hover {
+                  opacity: 1.0;
+                }
+                
+                .top-post-item.featured-post .category {
+                  color: #007aff;
+                }
+                
+                /*** meta */
+                .meta {
+                  display: flex;
+                  flex-wrap: wrap;
+                  align-items: center;
+                }
+                .meta .info
+                {
+                  display: flex;
+                  flex-wrap: wrap;
+                  flex-direction: column;
+                  font-size: 13px;
+                  line-height: 17px;
+                }
+                .meta .info .published-date
+                {
+                  margin-top: 3px;
+                  font-weight: 300;
+                  color: #818181;
+                }
+                .meta .author-photo img {
+                  border-radius: 50%;
+                  height: 48px;
+                  width: 48px;
+                }
+                .meta .author-name {
+                  font-weight: 700;
+                }
+                
+                .important-box p:last-child,
+                .light-box p:last-child
+                {
+                    margin-bottom: 0;
+                }
+                
+                /*** main content */
+                /*** main / list */
+                .post-body ul {
+                  list-style-position: outside;
+                  list-style: none;
+                }
+                .post-body ul li::before {
+                  color: #007aff;
+                  content: "•";
+                }
+                /*** Main / Special contexts */
+                .important-box {
+                    background-color: #F1F7FC;
+                }
+                .light-box {
+                    background-color: #F8F9FA;
+                }
+                .important-box,
+                .light-box {
+                    border-left: 6px solid #007aff;
+                }
+                
+                  /*** fonts */
+                h1 {
+                  font-size: 28px;
+                  line-height: 32px;
+                }
+                h2 {
+                  font-size: 25px;
+                  line-height: 30px;
+                }
+                h3 {
+                  font-size: 22px;
+                  line-height: 24px;
+                }
+                h3 {
+                  font-size: 18px;
+                  line-height: 20px;
+                }
+                h1 {
+                  margin-bottom: 22px;
+                  margin-top: 11px;
+                }
+                h2, h3, h4 {
+                  margin-bottom: 22px;
+                  margin-top: 44px;
+                }
+                /*** site header */
+                .site-header {
+                  padding: 12px 6px;
+                  font-size: 15px;
+                  line-height: 17px;
+                }
+                .site-navigation nav li {
+                  padding-left: 10px;
+                }
+                /*** site footer */
+                .site-footer {
+                  padding: 32px 6px 12px;
+                  font-size: 12px;
+                }
+                figcaption {
+                  margin-top: 4px;
+                }
+                /*** main content */
+                .main-content {
+                    padding: 12px 6px;
+                }
+                .post-body-outer {
+                  margin-top: 8px;
+                }
+                p {
+                  font-size: 16px;
+                  margin-bottom: 16px;
+                  line-height: 24px;
+                }
+                .post-body ul {
+                  margin: 12px;
+                }
+                .post-body ul li:before {
+                  color: #007aff;
+                  content: "•";
+                  margin-right: 6px;
+                }
+                .post-body ul li {
+                  line-height: 32px;
+                }
+                
+                /*** images */
+                .full-width-figure,
+                .simple-img {
+                  margin: 0 -6px 16px -6px;
+                }
+                .featured img {
+                  min-height: 230px;
+                }
+                .full-width-figure img,
+                .simple-img img {
+                  width: 100%;
+                  height: unset;
+                }
+                .full-width-figure figcaption,
+                .simple-img figcaption {
+                  font-size: 12px;
+                  line-height: 14px;
+                  margin: 4px 12px 0 12px;
+                }
+                
+                /*** TOC */
+                .toc {
+                  display: none;
+                }
+                
+                /*** other post items */
+                .index-post-item:hover {
+                  background-color: #FAFAFA;
+                }
+                .index-post-item:hover .thumbnail{
+                  opacity: 1;
+                }
+                .index-post-item-link {
+                  text-decoration: none;
+                }
+                .index-post-item {
+                  display: flex;
+                  flex-flow: column;
+                  margin: 24px -6px;
+                  border-bottom: 1px solid #C7DFF3;
+                  border-top:    1px solid #C7DFF3;
+                }
+                .index-post-item .thumbnail {
+                  width: 100%;
+                  height: 120px;
+                  object-fit: cover;
+                  flex-shrink: 0;
+                }
+                
+                /** fixme this should be generic */
+                .index-post-item .thumbnail img{
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                }
+                .index-post-item .meta {
+                  padding: 12px;
+                  margin: 0;
+                  flex-wrap: wrap;
+                  justify-content: none;
+                }
+                .index-post-item .meta .category{
+                  width: 100%;
+                  font-size: 13px;
+                  line-height: 16px;
+                  margin: 0 0 8px 0;
+                  color: #007aff;
+                  text-transform: uppercase;
+                }
+                
+                .index-post-item .meta .title {
+                  width: 100%;
+                  font-size: 17px;
+                  line-height: 20px;
+                  margin: 0 0 8px 0;
+                }
+                
+                .index-post-item .meta .excerpt {
+                  width: 100%;
+                  font-size: 15px;
+                  line-height: 20px;
+                  max-height: 80px;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  display: inline-block;
+                  margin: 0 0 8px 0;
+                }
+                
+                .index-post-item .meta .bs {
+                  width: 100%;
+                  height: 44px;
+                  display: flex;
+                  flex-wrap: wrap;
+                  align-items: center;
+                  margin: 0;
+                }
+                
+                .index-post-item .meta .bs .author-photo {
+                  height: 40px;
+                  width: 40px;
+                }
+                
+                .index-post-item .meta .bs .author-photo img {
+                  height: 40px;
+                  width: 40px;
+                  border-radius: 50%;
+                }
+                
+                .index-post-item .meta .bs .info {
+                    display: flex;
+                    flex-wrap: wrap;
+                    flex-direction: column;
+                }
+                
+                /*** top post items */
+                .other-post-items {
+                  display: none;
+                  padding: 32px 12px;
+                }
+                .top-post-item {
+                  padding: 16px 0;
+                }
+                .top-post-item .description {
+                  margin: 0 12px;
+                }
+                /*** meta */
+                .meta {
+                  margin-top: 32px;
+                  margin-bottom: 16px;
+                }
+                .meta .info {
+                  margin-left: 12px;
+                }
+                
+                /*** Main / Special contexts */
+                .important-box {
+                    padding: 16px;
+                    margin-bottom: 32px;
+                }
+                .light-box {
+                    padding: 16px;
+                    margin-bottom: 32px;
+                }
+                  @media (min-width: 600px) {
+                    /*** other post items */
+                .index-post-item {
+                  flex-flow: row;
+                }
+                .index-post-item .thumbnail {
+                  width: 327px;
+                  height: 202px;
+                  opacity: .85;
+                  object-fit: unset;
+                }
+                .index-post-item .meta .title {
+                  height: 40px;
+                }
+                
+                .index-post-item .meta .excerpt {
+                  line-height: 18px;
+                  height: 54px;
+                }
+                  }
+                  @media (min-width: 800px) {
+                    /*** main content */
+                /*** images */
+                .full-width-figure {
+                  margin: 0 0 16px 0;
+                }
+                .main-content-outer, .site-header, .site-footer {
+                  margin: 0 auto;
+                  max-width: 824px;
+                }
+                .index-post-item {
+                  margin: 24px 0px;
+                  border: 1px solid #C7DFF3;
+                }
+                  }
+                  @media (min-width: 1280px) {
+                    /*** fonts */
+                h1 {
+                  font-size: 42px;
+                  line-height: 50px;
+                }
+                h2, h3, h4 {
+                  margin-bottom: 24px;
+                  margin-top: 48px;
+                }
+                h2 {
+                  font-size: 28px;
+                  line-height: 36px;
+                }
+                h3 {
+                  font-size: 24px;
+                  line-height: 30px;
+                }
+                h4 {
+                  font-size: 20px;
+                  line-height: 28px;
+                }
+                p {
+                  font-size: 18px;
+                  line-height: 32px;
+                  margin-top: 32px;
+                  margin-bottom: 32px;
+                }
+                
+                /*** site header */
+                .site-header {
+                  max-width: 1280px;
+                  font-size: 16px;
+                  line-height: 18px;
+                  padding: 12px;
+                }
+                .site-navigation {
+                  font-size: 16px;
+                  font-weight: bold;
+                  line-height: 19px;
+                }
+                .site-navigation nav li {
+                  padding-left: 16px;
+                }
+                
+                /*** main content */
+                .main-content-outer {
+                  max-width: 1280px;
+                  display: flex;
+                  flex-wrap: wrap;
+                  margin: 24px auto 0;
+                }
+                .main-content {
+                    width: 700px;
+                    padding: 12px;
+                }
+                .post-body-outer {
+                  margin-top: 24px;
+                }
+                .post-body ul {
+                  margin: 32px;
+                }
+                .post-body ul li::before {
+                  margin-right: 16px;
+                }
+                .post-body ul li {
+                  font-size: 17px;
+                  line-height: 28px;
+                  margin-bottom: 16px;
+                }
+                
+                /*** post items */
+                .toc {
+                  display: unset;
+                  position: sticky;
+                  top: 44px;
+                  align-self: flex-start;
+                  width: 250px;
+                  padding: 12px;
+                }
+                .toc h3 {
+                  font-size: 14px;
+                  line-height: 16px;
+                  color: #333333;
+                  font-weight: bold;
+                  margin-top: unset;
+                  margin-bottom: 8px;
+                }
+                .toc li {
+                  font-size: 13px;
+                  line-height: 16px;
+                  list-style: none;
+                  overflow: hidden;
+                  padding: 4px 0;
+                }
+                .toc li a {
+                  text-decoration: none;
+                }
+                .toc li.selected {
+                  font-weight: bold;
+                  border-left: 3px solid #007aff;
+                }
+                .toc li.selected a {
+                  color: #007aff;
+                }
+                .toc li.h1 {
+                  padding-left: 8px;
+                }
+                .toc li.h1.selected {
+                  padding-left: 5px;
+                }
+                .toc li.h2 {
+                  padding-left: 15px;
+                }
+                .toc li.h2.selected {
+                  padding-left: 12px;
+                }
+                .toc li.h3 {
+                  padding-left: 27px;
+                }
+                .toc li.h3.selected {
+                  padding-left: 24px;
+                }
+                
+                /*** post items */
+                .post-items {
+                  display: unset;
+                  width: 330px;
+                  padding: 12px;
+                  padding-left: 24px;
+                }
+                .top-post-item {
+                  padding: 0;
+                }
+                .post-items h3 {
+                  font-size: 14px;
+                  line-height: 16px;
+                  color: #333333;
+                  font-weight: bold;
+                  margin-top: unset;
+                  margin-bottom: 6px;
+                }
+                .post-item-outer {
+                  padding: 12px 0;
+                }
+                .top-post-item .description {
+                  margin-left: 6px;
+                  margin-right: 0;
+                }
+                .top-post-item .description .category {
+                  margin-bottom: 4px;
+                  font-size: 12px;
+                  line-height: 14px;
+                }
+                .top-post-item .description .title {
+                  margin-bottom: 4px;
+                  font-size: 13px;
+                  line-height: 15px;
+                  height: 45px;
+                  text-overflow: ellipsis;
+                }
+                .top-post-item .description .meta {
+                  font-size: 12px;
+                  line-height: 14px;
+                  margin: 0;
+                  color: #818181;
+                }
+                
+                /*** images */
+                .full-width-figure {
+                }
+                .simple-img {
+                  margin: 32px auto;
+                }
+                .featured img {
+                  height: 417px;
+                }
+                .full-width-figure figcaption,
+                .simple-img figcaption {
+                  font-size: 12px;
+                }
+                
+                /*** site footer */
+                .site-footer {
+                  max-width: 1280px;
+                  padding: 60px 12px 24px 12px;
+                  font-size: 14px;
+                  line-height: 18px;
+                }
+                  }
+                  @media (min-width: 1366px) {
+                    /*** site header */
+                .site-header {
+                  max-width: 1366px;
+                }
+                
+                /*** main content */
+                .main-content-outer {
+                  max-width: 1366px;
+                }
+                
+                /*** post items */
+                .toc {
+                  width: 288px;
+                  padding-right: 24px;
+                }
+                .toc h3 {
+                  font-size: 16px;
+                  line-height: 17px;
+                }
+                .toc li {
+                  font-size: 15px;
+                }
+                
+                /*** post items */
+                .post-items {
+                  width: 378px;
+                  padding-left: 24px;
+                }
+                .post-items h3 {
+                  font-size: 16px;
+                  line-height: 17px;
+                }
+                .post-item-outer {
+                  padding: 12px 0;
+                }
+                .top-post-item .description {
+                  margin-left: 6px;
+                }
+                .top-post-item .description .category {
+                  margin-bottom: 6px;
+                  font-size: 14px;
+                  line-height: 15px;
+                }
+                .top-post-item .description .title {
+                  margin-bottom: 6px;
+                  font-size: 15px;
+                  line-height: 18px;
+                  height: 36px;
+                  text-overflow: ellipsis;
+                }
+                .top-post-item .description .meta {
+                  font-size: 13px;
+                  line-height: 16px;
+                  margin: 0;
+                  color: #818181;
+                }
+                
+                /*** site footer */
+                .site-footer {
+                  max-width: 1366px;
+                }
+                  }
+            </style>
+            <script type="application/ld+json">
+                {
+                    "@context": "http://schema.org",
+                    "@type": "Organization",
+                    "@id": "https://www.tonyonsecurity.com/#organization",
+                    "name": "Tony On Security",
+                    "url": "https://www.tonyonsecurity.com/",
+                    "logo": {
+                        "@type": "ImageObject",
+                        "@id": "https://www.tonyonsecurity.com/#organization/logo",
+                        "url": "https://www.tonyonsecurity.com/assets/images/tonyonsecurity-logo-256x256.jpg",
+                        "height": "256px",
+                        "width": "256px",
+                        "caption": "Tony On Security Logo"
+                    },
+                    "alumni": [
+                        {
+                            "@type": "Person",
+                            "@id": "https://www.tonyonsecurity.com/#people/tony_fox",
+                            "name": "Tony Fox"
+                        }
+                    ],
+                    "sameAs": ["https://twitter.com/tonyonsecur1ty"]
+            
+                        }
+            </script>
+            <script type="application/ld+json">
+                {
+                    "@context": "http://schema.org",
+                    "@type": "BreadcrumbList",
+                    "@id": "https://www.tonyonsecurity.com/2014/08/17/importance-of-updates-in-website-security/#breadcrumbs",
+                    "itemListElement": [
+            
+                                    {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Tony On Security",
+                            "item": "https://www.tonyonsecurity.com//"
+            
+                                        },
+            
+                                    {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Blog",
+                            "item": "https://www.tonyonsecurity.com/blog/"
+            
+                                        },
+            
+                                    {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "Importance of Updates in Website Security"
+                        }
+                    ]
+                }
+            </script>
+            <script type="application/ld+json">
+                {
+                    "@context": "https://schema.org",
+                    "@id": "https://www.tonyonsecurity.com/2014/08/17/importance-of-updates-in-website-security/",
+                    "@type": "BlogPosting",
+                    "headline": "Importance of Updates in Website Security",
+                    "description": "Security patches are often used in computers and other electronic devices that get software updates when they become available.",
+                    "image": [{
+                        "@type": "ImageObject",
+                        "url": "https://www.tonyonsecurity.com/assets/pictures/2014/08/17/importance-of-updates-in-website-security/laptop-updating-itself-1200x1200.jpg",
+                        "height": "1200px",
+                        "width": "1200px",
+                        "caption": ""
+                    }, {
+                        "@type": "ImageObject",
+                        "url": "https://www.tonyonsecurity.com/assets/pictures/2014/08/17/importance-of-updates-in-website-security/laptop-updating-itself-1200x900.jpg",
+                        "height": "900px",
+                        "width": "1200px",
+                        "caption": ""
+                    }, {
+                        "@type": "ImageObject",
+                        "url": "https://www.tonyonsecurity.com/assets/pictures/2014/08/17/importance-of-updates-in-website-security/laptop-updating-itself-1200x675.jpg",
+                        "height": "675",
+                        "width": "1200px",
+                        "caption": ""
+                    }],
+                    "datePublished": "2014-08-17",
+                    "dateModified": "2014-08-17",
+                    "author": {
+                        "@id": "https://www.tonyonsecurity.com/#people/tony_fox"
+                    },
+                    "publisher": {
+                        "@id": "https://www.tonyonsecurity.com/#organization"
+                    },
+                    "mainEntityOfPage": "https://www.tonyonsecurity.com/2014/08/17/importance-of-updates-in-website-security/"
+                }
+            </script>
+            <script>
+                if(sessionStorage&&sessionStorage.fontsLoaded) {
+              var html = document.documentElement;
+              html.classList.add("fonts-loaded");
+            }
+            </script>
+    </head>
+    
+    <body>
+        <div class="body-inner">
+            <div class="site-header-outer">
+                <header class="site-header">
+                    <nav class="site-logo"> <a href="https://www.tonyonsecurity.com/">
+                <span style="font-weight: 700">tony</span><span style="font-weight: 400">security</span><span style="font-weight: 700" class="logo-line">|</span>
+            </a>
+
+                    </nav>
+                    <div class="site-navigation">
+                        <nav>
+                            <ul>
+                                <li> <a href="https://www.tonyonsecurity.com/blog/"><span>blog</span></a>
+
+                                </li>
+                                <li> <a href="https://www.tonyonsecurity.com/about/"><span>about</span></a>
+
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </header>
+            </div>
+            <div class="main-content-outer">
+                <nav class="toc">
+                     <h3>Table of contents</h3>
+
+                    <ul>
+                        <li class="h1"><a href="#importance-of-updates-in-website-security">Importance of Updates in Website Security</a>
+                        </li>
+                    </ul>
+                </nav>
+                <script>
+                    window.addEventListener('DOMContentLoaded', () => {
+                      const observer = new IntersectionObserver(entries => {
+                        entries.forEach(entry => {
+                          const id = entry.target.getAttribute('id');
+                          const elements = document.querySelector(`nav ul li a[href="#${id}"]`);
+                          if (entry.intersectionRatio > 0) {
+                            elements.parentElement.classList.add('selected');
+                          } else {
+                            elements.parentElement.classList.remove('selected');
+                          }
+                        });
+                      });
+                    
+                      const articles = document.querySelectorAll('article[id]');
+                      if(articles) {
+                        articles.forEach((section) => { observer.observe(section); });
+                      }
+                    
+                      const h1s = document.querySelectorAll('h1[id]');
+                      if(h1s) {
+                        h1s.forEach((section) => { observer.observe(section); });
+                      }
+                      const h2s = document.querySelectorAll('h2[id]');
+                      if(h2s) {
+                        h2s.forEach((section) => { observer.observe(section); });
+                      }
+                      const h3s = document.querySelectorAll('h3[id]');
+                      if(h3s) {
+                        h3s.forEach((section) => { observer.observe(section); });
+                      }
+                    });
+                </script>
+                <main class="main-content">
+                    <article>
+                        <div class="page-header-outer">
+                            <header class="page-header">
+                                 <h1 id="importance-of-updates-in-website-security">Importance of Updates in Website Security</h1>
+
+                                <aside class="meta">
+                                    <div class="author-photo">
+                                        <img alt="The picture of Tony Fox" src="https://www.tonyonsecurity.com/assets/images/tony_fox_64x64.jpg"
+                                        srcset="https://www.tonyonsecurity.com/assets/images/tony_fox_128x128.jpg 2x">
+                                    </div>
+                                    <div class="info"> <span class="author-name">Tony Fox</span>
+ <span class="published-date">Aug 17th, 2014</span>
+
+                                    </div>
+                                </aside>
+                            </header>
+                        </div>
+                        <div class="post-body-outer">
+                            <div class="post-body">
+                                <div class="post-body-inner">
+                                    <p>Security patches are often used in computers and other electronic devices
+                                        that get software updates when they become available.</p>
+                                    <p>This may not seem like a huge problem at first, and many people will click
+                                        the option to conduct the update later. To access a device and the network
+                                        it is connected to, hackers need to instruct the device or software to
+                                        update later.</p>
+                                    <aside>
+                                        <figure class="full-width-figure  featured">
+                                            <picture>
+                                                <source type="image/webp" srcset="
+              https://www.tonyonsecurity.com/assets/pictures/2014/08/17/importance-of-updates-in-website-security/laptop-updating-itself-800.webp 800w,
+              https://www.tonyonsecurity.com/assets/pictures/2014/08/17/importance-of-updates-in-website-security/laptop-updating-itself-1200.webp 1200w,
+              https://www.tonyonsecurity.com/assets/pictures/2014/08/17/importance-of-updates-in-website-security/laptop-updating-itself-1600.webp 1600w"
+                                                sizes="
+              (max-width: 800px) 100vw,
+              800px" />
+                                                <source type="image/jpeg" srcset="
+              https://www.tonyonsecurity.com/assets/pictures/2014/08/17/importance-of-updates-in-website-security/laptop-updating-itself-800.jpg 800w,
+              https://www.tonyonsecurity.com/assets/pictures/2014/08/17/importance-of-updates-in-website-security/laptop-updating-itself-1200.jpg 1200w,
+              https://www.tonyonsecurity.com/assets/pictures/2014/08/17/importance-of-updates-in-website-security/laptop-updating-itself-1600.jpg 1600w"
+                                                sizes="
+              (max-width: 800px) 100vw,
+              800px" />
+                                                <img src="https://www.tonyonsecurity.com/assets/pictures/2014/08/17/importance-of-updates-in-website-security/laptop-updating-itself-800.jpg"
+                                                alt="A laptop is running it's updates." />
+                                            </picture>
+                                            <figcaption>Photo by <a href="https://unsplash.com/@cbpsc1" rel="nofollow">Clint Patterson</a> on
+                                                <a
+                                                href="https://unsplash.com/" rel="nofollow">Unsplash</a>
+                                            </figcaption>
+                                        </figure>
+                                    </aside>
+                                    <p>As a result of their interconnectedness, business equipment and software
+                                        are the most susceptible to this.</p>
+                                    
+<h2 id="in-what-capacity-do-you-define-a-security-patch">In what capacity do you define a security patch?</h2>
+
+                                    <p>In the case of security patch updates, a software developer pushes an
+                                        update to all devices that contain the program that requires the update.
+                                        The patch updates are delayed because the hole or vulnerability is not
+                                        found before the significant update or original program is launched. When
+                                        a software update or initial download leaves security flaws, a patch update
+                                        is used to plug those gaps.</p>
+                                    <p>The developer was alerted that hundreds of people had been hacked due
+                                        to a security hole or vulnerability. An update is sent out as soon as the
+                                        developer becomes aware of a hole or vulnerability.</p>
+                                    <p>Note that the security patch will not work if the user or network administrator
+                                        does not immediately install the update that contains the security patch.</p>
+                                    <p>In the same way that no human being is flawless, neither are operating
+                                        systems or software. As a result, if you have the original software but
+                                        choose not to upgrade it, you are leaving a hole in your security with
+                                        every published patch.</p>
+                                    <p>As well, many operating system upgrades contain security fixes. Hackers
+                                        can take advantage of this situation if they fail to apply the security
+                                        patch update(s).</p>
+                                    <p>This is often how they gain access to your computer and, if relevant,
+                                        the whole company’s network.</p>
+                                    
+<h2 id="software-vulnerability-scanning">Software vulnerability scanning</h2>
+
+                                    <p>In addition to the capacity to access your device’s information, online
+                                        browsers may also download files to your device. Passwords and login information
+                                        can be readily stolen when security patches are not updated on software
+                                        that they have produced or that others have developed. This is where Network
+                                        Coverage Security may be of use to you! It can be used to scan systems
+                                        for vulnerabilities by those who are more skilled and have built software
+                                        to scan for frequently known browser vulnerabilities.</p>
+                                    <p>IP addresses of these systems can be sold to third parties for their use,
+                                        or the identified systems themselves can be attacked based on the same
+                                        vulnerability found. They will check for weaknesses again and again. Web
+                                        browsers aren’t the only applications that can be modified to scan for
+                                        vulnerabilities with this program.</p>
+                                    <p>A vulnerability might be discovered every time an IP address is scanned,
+                                        even if the system has not been examined in the past. Since these hackers
+                                        are so persistent, simply applying these security patch updates regularly
+                                        is not enough to keep you safe. Assume that they will identify and exploit
+                                        any vulnerabilities that exist.</p>
+                                    
+<h2 id="invasion-of-network-connected-systems-from-a-position-of-strength">Invasion of network-connected systems from a position of strength</h2>
+
+                                    <p>A toehold is a significant entrance location that hackers establish by
+                                        exploiting devices that do not have known patch updates installed.</p>
+                                    <p>To get access to a computer without really assaulting it, a hacker will
+                                        simply utilize the information on the primary entrance device to gain access
+                                        to the system.</p>
+                                    <p>Hackers can steal information or operate on the backend of systems after
+                                        gaining access to a mainframe or business computer system. More experienced
+                                        hackers usually use this approach to target an extensive corporate or business
+                                        network and its systems rather than attacking a single system in isolation.
+                                        In other words, this is the means to easily access the data of a whole
+                                        organization or corporation, rather than simply a few individuals’ data.</p>
+                                    <p>By utilizing the entire network instead of a single individual’s bank
+                                        account, they may obtain access to the company’s financial accounts. In
+                                        general, hackers don’t broadcast or trade the IP addresses of computers
+                                        linked to an extensive network since too much attention might cause the
+                                        vulnerability to be discovered by the incorrect person. The person who
+                                        tells the developer of the problem to patch it or effectively shut down
+                                        the system and, in most cases, the entire network.</p>
+                                    
+<h2 id="infection-that-lasts-for-a-long-time">Infection that lasts for a long time</h2>
+
+                                    <p>Most malware that gets into a system doesn’t merely acquire what it wants
+                                        and leave right away. Because if they can take information over long periods
+                                        while being undetected, that makes sense to me. A long-term infection might
+                                        arise from failing to install security patch updates for any program on
+                                        your machine that you operate often. There is malware on the system if
+                                        the hacker can get in through the hole, and it will remain there until
+                                        action is made to eliminate it.</p>
+                                    <p>Even if the hackers who first gained access to your system cannot do anything
+                                        with it, they will surely try to do so at some point in the future. Long-term
+                                        effects resulted from this, but what about infections?</p>
+                                    <p>As a result of its ability to proliferate rapidly, it is a long-term infection.
+                                        It is not uncommon for hackers to exchange the IP addresses of known compromised
+                                        computers. According to the researchers, anyone who knows your IP address
+                                        has access to your information since they know that your system has already
+                                        been infiltrated. If you give them the opportunity, they can scan your
+                                        information as often and as long as they like.</p>
+                                    <p>Everything comes down to one individual in your corporate network who,
+                                        out of habit or convenience, clicks on the “Update Later Button”. One compromised
+                                        system is all it takes to corrupt a whole network. Your company network
+                                        might be compromised in one of two ways. In either case, a weakness existed
+                                        in one of the systems, or the individual who operates the system had a
+                                        vulnerability that could be exploited.</p>
+                                    <p>For your protection and peace of mind, it’s vital to keep your system
+                                        free of security leaks. Coverage Security for Networks helps to safeguard
+                                        your secrets. Some system breaches result from a zero-day assault rather
+                                        than a patch update that was not deployed. Unknown vulnerability is exploited
+                                        to launch the first assault, known as a zero-day attack. Therefore, a patch
+                                        update must be implemented as soon as possible to offer users a chance
+                                        to remedy the flaw before further assaults occur. But not every patch update
+                                        comes from an ‘evil’ hacker as well.</p>
+                                    <p>Developers will often undertake security audits and consult with their
+                                        experts to identify vulnerabilities, then utilize that knowledge to create
+                                        a patch update. Most updates are intended to fix vulnerabilities identified
+                                        by hostile hackers, which is a good concept in theory.</p>
+                                    <p>Security patch upgrades overlook one of the computer system’s most critical
+                                        vulnerabilities. Some solutions may be installed to aid with security patch
+                                        updates due to the complexity and difficulty of keeping track of the many
+                                        different types of software utilized on your company computer. Uncommonly,
+                                        network administrators can force security patches on all computers as soon
+                                        as they are available. Several antivirus and malware vendors have included
+                                        an extension to their services to maintain track of security patch updates.
+                                        Users or employees can choose to postpone installing updates on their computers
+                                        if the tool is not utilized through a network administrator, which may
+                                        not be ideal for a corporation.</p>
+                                    <p>Please find out how we can help with all your security needs by contacting
+                                        us.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </main>
+                <nav class="post-items">
+                     <h3>Top posts</h3>
+
+                </nav>
+            </div>
+            <aside class="site-footer-outer">
+                <footer class="site-footer">
+                    <div class="footer-logo"> <span style="font-weight: 700">tony</span><span style="font-weight: 400">security</span>
+                        <span
+                        style="font-weight: 700" class="logo-line">|</span>
+                    </div>
+                    <div class="footer-copyright"> <span><a href="https://www.tonyonsecurity.com/sitemap.xml">sitemap</a></span> | <span><a href="mailto:info@tonyonsecurity.com">email</a></span> | <span><a href="https://twitter.com/@tonyonsecur1ty">twitter</a></span>
+
+                    </div>
+                </footer>
+            </aside>
+        </div>
+        <script defer src="https://www.tonyonsecurity.com/assets/js/main.js"></script>
+    </body>
+
+</html>
