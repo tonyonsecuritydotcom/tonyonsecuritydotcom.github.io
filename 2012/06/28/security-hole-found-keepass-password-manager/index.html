@@ -24,6 +24,7 @@
             <meta name="twitter:card" content="summary_large_image">
             <meta name="twitter:creator" content="@tonyonsecur1ty">
             <meta name="twitter:site" content="@tonyonsecur1ty">
+            <meta name="twitter:title" content="Researcher alerts the public to KeePass's security flaw">
             <script async src="https://www.googletagmanager.com/gtag/js?id=UA-170847243-6"></script>
             <script>
                 window.dataLayer = window.dataLayer || [];
@@ -76,7 +77,7 @@
                 }
                 body {
                   font-family: sans-serif;
-                  letter-spacing: 0.5px;
+                  letter-spacing: 0.4px;
                 }
                 .fonts-loaded body {
                   font-family: "Inter", sans-serif;
@@ -207,6 +208,14 @@
                   font-weight: 700;
                 }
                 
+                .important-box p:first-child,
+                .light-box p:first-child,
+                .important-box h3:first-child,
+                .light-box h3:first-child
+                {
+                    margin-top: 0;
+                }
+                
                 .important-box p:last-child,
                 .light-box p:last-child
                 {
@@ -220,8 +229,8 @@
                   list-style: none;
                 }
                 .post-body ul li::before {
-                  color: #007aff;
-                  content: "•";
+                  margin-right: 6px;
+                  margin-left: -12px;
                 }
                 /*** Main / Special contexts */
                 .important-box {
@@ -542,7 +551,10 @@
                   margin: 32px;
                 }
                 .post-body ul li::before {
-                  margin-right: 16px;
+                  color: #007aff;
+                  content: "•";
+                  margin-left: -28px;
+                  margin-right: 18px;
                 }
                 .post-body ul li {
                   font-size: 17px;
@@ -569,13 +581,14 @@
                 }
                 .toc li {
                   font-size: 13px;
-                  line-height: 16px;
+                  line-height: 17px;
                   list-style: none;
                   overflow: hidden;
                   padding: 4px 0;
                 }
                 .toc li a {
                   text-decoration: none;
+                  letter-spacing: 0.25px;
                 }
                 .toc li.selected {
                   font-weight: bold;
@@ -583,6 +596,7 @@
                 }
                 .toc li.selected a {
                   color: #007aff;
+                  letter-spacing: 0px;
                 }
                 .toc li.h1 {
                   padding-left: 8px;
@@ -770,7 +784,7 @@
                             "@type": "ListItem",
                             "position": 1,
                             "name": "Tony On Security",
-                            "item": "https://www.tonyonsecurity.com//"
+                            "item": "https://www.tonyonsecurity.com/"
             
                                         },
             
@@ -778,7 +792,7 @@
                             "@type": "ListItem",
                             "position": 2,
                             "name": "Blog",
-                            "item": "https://www.tonyonsecurity.com/blog/"
+                            "item": "https://www.tonyonsecurity.com/blog"
             
                                         },
             
@@ -873,10 +887,12 @@
                         entries.forEach(entry => {
                           const id = entry.target.getAttribute('id');
                           const elements = document.querySelector(`nav ul li a[href="#${id}"]`);
-                          if (entry.intersectionRatio > 0) {
-                            elements.parentElement.classList.add('selected');
-                          } else {
-                            elements.parentElement.classList.remove('selected');
+                          if (elements) {
+                              if (entry.intersectionRatio > 0) {
+                                elements.parentElement.classList.add('selected');
+                              } else {
+                                elements.parentElement.classList.remove('selected');
+                              }
                           }
                         });
                       });
@@ -923,249 +939,244 @@
                                 <div class="post-body-inner">
                                     <p>Private security researcher claims to have found a remotely exploitable
                                         security weakness in KeePass, the free, open-source password manager.</p>
-                                    <aside>
-                                        <figure class="full-width-figure  featured">
-                                            <picture>
-                                                <source type="image/webp" srcset="
+                                    <div
+                                    id="featured-img">
+                                        <aside>
+                                            <figure class="full-width-figure  featured">
+                                                <picture>
+                                                    <source type="image/webp" srcset="
               https://www.tonyonsecurity.com/assets/pictures/2012/06/28/security-hole-found-keepass-password-manager/keepass-logo-800.webp 800w,
               https://www.tonyonsecurity.com/assets/pictures/2012/06/28/security-hole-found-keepass-password-manager/keepass-logo-1200.webp 1200w,
               https://www.tonyonsecurity.com/assets/pictures/2012/06/28/security-hole-found-keepass-password-manager/keepass-logo-1600.webp 1600w"
-                                                sizes="
+                                                    sizes="
               (max-width: 800px) 100vw,
               800px" />
-                                                <source type="image/jpeg" srcset="
+                                                    <source type="image/jpeg" srcset="
               https://www.tonyonsecurity.com/assets/pictures/2012/06/28/security-hole-found-keepass-password-manager/keepass-logo-800.jpg 800w,
               https://www.tonyonsecurity.com/assets/pictures/2012/06/28/security-hole-found-keepass-password-manager/keepass-logo-1200.jpg 1200w,
               https://www.tonyonsecurity.com/assets/pictures/2012/06/28/security-hole-found-keepass-password-manager/keepass-logo-1600.jpg 1600w"
-                                                sizes="
+                                                    sizes="
               (max-width: 800px) 100vw,
               800px" />
-                                                <img src="https://www.tonyonsecurity.com/assets/pictures/2012/06/28/security-hole-found-keepass-password-manager/keepass-logo-800.jpg"
-                                                alt="A drawn lock in a circle." />
-                                            </picture>
-                                            <figcaption>Picture from <a href="https://commons.wikimedia.org/wiki/File:KeePass_icon.svg"
-                                                rel="nofollow">wikipedia</a>
-                                            </figcaption>
-                                        </figure>
-                                    </aside>
-                                    <p>A minor security flaw has been found in KeePass, according to the program’s
-                                        inventor.</p>
-                                    <p>Private security researcher claims to have found a remotely exploitable
-                                        security weakness in KeePass, the free, open-source password manager.</p>
-                                    <p>On the other hand, KeePass’s creator describes the flaw as modest and
-                                        unlikely to be utilized in an assault by an adversary.</p>
-                                    <p>Researcher Benjamin Kunz Mejri of Vulnerability Lab uncovered the flaw
-                                        in KeePass Password Manager up to and including version 1.22.</p>
-                                    <p>Upon successful exploitation, an attacker with access to a machine running
-                                        KeePass could inject malicious content by sending a specially crafted file
-                                        to the HTML/XML export feature.</p>
-                                    <p>As Kunz Mejri noted in his blog post, an attacker would require a URL
-                                        altered with malicious script code, a log server with reading/write/execute
-                                        (chmod 777) access, a listing file, and an actual victim is using KeePass
-                                        v1.22.</p>
-                                    <p>Kunz Mejri cautioned that once the flaw is exploited, the attacker will
-                                        collect plain password lists, among other assaults.</p>
-                                    <p>Because attackers must gain local access to a vulnerable machine and trick
-                                        users into doing specific actions to import malicious content without realizing
-                                        it, the security flaw has been classified as “medium.”</p>
-                                    <p>Dominik Reichl, a developer of KeePass, told Threatpost that he believes
-                                        the vulnerability is minimal.</p>
-                                    <p>A user to insert harmful data without their knowledge, export the database
-                                        to an HTML file, and access it,” explains a security expert.</p>
-                                    <p>Reichl said that KeePass Version 1.23, due out in a few months, will include
-                                        a patch for the problem.</p>
-                                    <p>KeePass’ development version has been updated to include the patch.</p>
-                                    <p>It is remotely exploitable, according to Kunz Mejri.</p>
-                                    <p>It’s remote (sp) exploitable if, for example, I alter a login page with
-                                        malicious script code, and you, as a keypass user, save it via auto URL
-                                        type, he said.</p>
-                                    <p>Open-source password manager KeePass is offered under the GPL license
-                                        and is free and open-source software.</p>
-                                    <p>Initially published in 2006, the program was created for persons who must
-                                        manage access to dozens (or more) of different Websites and apps.</p>
-                                    <p>For programs and Web sites, it allows users to save their login credentials
-                                        securely, then accesses them with a single password, regardless of the
-                                        operating system they’re using.</p>
-                                    <p>Not the only password management tool to have security issues.</p>
-                                    <p>It was discovered that KeePass’s primary competitor, LastPass, had a critical
-                                        security weakness that could be exploited to divulge essential account
-                                        data.</p>
-                                    <p>After finding a broader security issue on its site in May 2011, the site
-                                        recommended that clients change their passwords.</p>
+                                                    <img src="https://www.tonyonsecurity.com/assets/pictures/2012/06/28/security-hole-found-keepass-password-manager/keepass-logo-800.jpg"
+                                                    alt="A drawn lock in a circle." />
+                                                </picture>
+                                                <figcaption>Picture from <a href="https://commons.wikimedia.org/wiki/File:KeePass_icon.svg"
+                                                    rel="nofollow">wikipedia</a>
+                                                </figcaption>
+                                            </figure>
+                                        </aside>
                                 </div>
+                                <p>A minor security flaw has been found in KeePass, according to the program’s
+                                    inventor.</p>
+                                <p>Private security researcher claims to have found a remotely exploitable
+                                    security weakness in KeePass, the free, open-source password manager.</p>
+                                <p>On the other hand, KeePass’s creator describes the flaw as modest and
+                                    unlikely to be utilized in an assault by an adversary.</p>
+                                <p>Researcher Benjamin Kunz Mejri of Vulnerability Lab uncovered the flaw
+                                    in KeePass Password Manager up to and including version 1.22.</p>
+                                <p>Upon successful exploitation, an attacker with access to a machine running
+                                    KeePass could inject malicious content by sending a specially crafted file
+                                    to the HTML/XML export feature.</p>
+                                <p>As Kunz Mejri noted in his blog post, an attacker would require a URL
+                                    altered with malicious script code, a log server with reading/write/execute
+                                    (chmod 777) access, a listing file, and an actual victim is using KeePass
+                                    v1.22.</p>
+                                <p>Kunz Mejri cautioned that once the flaw is exploited, the attacker will
+                                    collect plain password lists, among other assaults.</p>
+                                <p>Because attackers must gain local access to a vulnerable machine and trick
+                                    users into doing specific actions to import malicious content without realizing
+                                    it, the security flaw has been classified as “medium.”</p>
+                                <p>Dominik Reichl, a developer of KeePass, told Threatpost that he believes
+                                    the vulnerability is minimal.</p>
+                                <p>A user to insert harmful data without their knowledge, export the database
+                                    to an HTML file, and access it,” explains a security expert.</p>
+                                <p>Reichl said that KeePass Version 1.23, due out in a few months, will include
+                                    a patch for the problem.</p>
+                                <p>KeePass’ development version has been updated to include the patch.</p>
+                                <p>It is remotely exploitable, according to Kunz Mejri.</p>
+                                <p>It’s remote (sp) exploitable if, for example, I alter a login page with
+                                    malicious script code, and you, as a keypass user, save it via auto URL
+                                    type, he said.</p>
+                                <p>Open-source password manager KeePass is offered under the GPL license
+                                    and is free and open-source software.</p>
+                                <p>Initially published in 2006, the program was created for persons who must
+                                    manage access to dozens (or more) of different Websites and apps.</p>
+                                <p>For programs and Web sites, it allows users to save their login credentials
+                                    securely, then accesses them with a single password, regardless of the
+                                    operating system they’re using.</p>
+                                <p>Not the only password management tool to have security issues.</p>
+                                <p>It was discovered that KeePass’s primary competitor, LastPass, had a critical
+                                    security weakness that could be exploited to divulge essential account
+                                    data.</p>
+                                <p>After finding a broader security issue on its site in May 2011, the site
+                                    recommended that clients change their passwords.</p>
                             </div>
                         </div>
-                    </article>
-                </main>
-                <nav class="post-items">
-                     <h3>Top posts</h3>
+            </div>
+            </article>
+            </main>
+            <nav class="post-items">
+                 <h3>Top posts</h3>
 
-                    <div class="post-item-outer"> <a href="https://www.tonyonsecurity.com">
+                <div class="post-item-outer"> <a href="https://www.tonyonsecurity.com/2013/03/13/ossec-for-website-security-part-i/">
             <div class="top-post-item featured-post">
                 <img class="thumbnail"
-                    alt=""
-                    srcset="https://www.tonyonsecurity.com/assets/pictures-80x80.jpg,
-                            https://www.tonyonsecurity.com/assets/pictures-160x160.jpg 2x"
-                       src="https://www.tonyonsecurity.com/assets/pictures-80x80.jpg"
+                    alt="OSSEC written on a white background."
+                    srcset="https://www.tonyonsecurity.com/assets/pictures/2013/03/13/ossec-for-website-security-part-i/ossec-logo-80x80.jpg,
+                            https://www.tonyonsecurity.com/assets/pictures/2013/03/13/ossec-for-website-security-part-i/ossec-logo-160x160.jpg 2x"
+                    src="https://www.tonyonsecurity.com/assets/pictures/2013/03/13/ossec-for-website-security-part-i/ossec-logo-80x80.jpg"
+                    loading="lazy"
                 />
                 <div class="description">
-                    <h3 class="category"></h3>
-                    <h4 class="title"></h4>
-                    <span class="meta"> views -  min read</span>
+                    <h3 class="category">DETECTION</h3>
+                    <h4 class="title">OSSEC for Website Security</h4>
+                    <span class="meta">247 views - 5 min read</span>
                 </div>
             </div>
         </a>
 
-                    </div>
-                    <div class="post-item-outer"> <a href="https://www.tonyonsecurity.com">
+                </div>
+                <div class="post-item-outer"> <a href="https://www.tonyonsecurity.com/2014/11/07/how-hosts-manage-your-website-security/">
             <div class="top-post-item featured-post">
                 <img class="thumbnail"
-                     alt=""
-                     srcset="https://www.tonyonsecurity.com/assets/pictures-80x80.jpg,
-                            https://www.tonyonsecurity.com/assets/pictures-160x160.jpg 2x"
-                     src="https://www.tonyonsecurity.com/assets/pictures-80x80.jpg"
+                     alt="A person using a laptop with gloves on."
+                     srcset="https://www.tonyonsecurity.com/assets/pictures/2014/11/07/how-hosts-manage-your-website-security/using-laptop-with-gloves-80x80.jpg,
+                            https://www.tonyonsecurity.com/assets/pictures/2014/11/07/how-hosts-manage-your-website-security/using-laptop-with-gloves-160x160.jpg 2x"
+                     src="https://www.tonyonsecurity.com/assets/pictures/2014/11/07/how-hosts-manage-your-website-security/using-laptop-with-gloves-80x80.jpg"
+                     loading="lazy"
                 />
                 <div class="description">
-                    <h3 class="category"></h3>
-                    <h4 class="title"></h4>
-                    <span class="meta"> views -  min read</span>
+                    <h3 class="category">SECURITY</h3>
+                    <h4 class="title">How Hosts Manage Your Website Security</h4>
+                    <span class="meta">121 views - 4 min read</span>
                 </div>
             </div>
         </a>
 
-                    </div>
-                    <div class="post-item-outer"> <a href="https://www.tonyonsecurity.com">
+                </div>
+                <div class="post-item-outer"> <a href="https://www.tonyonsecurity.com/2014/08/17/importance-of-updates-in-website-security/">
             <div class="top-post-item featured-post">
                 <img class="thumbnail"
-                     alt=""
-                     srcset="https://www.tonyonsecurity.com/assets/pictures-80x80.jpg,
-                            https://www.tonyonsecurity.com/assets/pictures-160x160.jpg 2x"
-                     src="https://www.tonyonsecurity.com/assets/pictures-80x80.jpg"
+                     alt="A laptop is running it's updates."
+                     srcset="https://www.tonyonsecurity.com/assets/pictures/2014/08/17/importance-of-updates-in-website-security/laptop-updating-itself-80x80.jpg,
+                            https://www.tonyonsecurity.com/assets/pictures/2014/08/17/importance-of-updates-in-website-security/laptop-updating-itself-160x160.jpg 2x"
+                     src="https://www.tonyonsecurity.com/assets/pictures/2014/08/17/importance-of-updates-in-website-security/laptop-updating-itself-80x80.jpg"
+                     loading="lazy"
                 />
                 <div class="description">
-                    <h3 class="category"></h3>
-                    <h4 class="title"></h4>
-                    <span class="meta"> views -  min read</span>
+                    <h3 class="category">SECURITY</h3>
+                    <h4 class="title">Importance of Updates in Website Security</h4>
+                    <span class="meta">34 views - 4 min read</span>
                 </div>
             </div>
         </a>
 
-                    </div>
-                    <div class="post-item-outer"> <a href="https://www.tonyonsecurity.com">
+                </div>
+                <div class="post-item-outer"> <a href="https://www.tonyonsecurity.com/2013/03/09/protect-your-website-vulnerabilities-with-a-waf-new-compairson-report-cloudflare-vs-incapsula-vs-modsecurity/">
             <div class="top-post-item featured-post">
                 <img class="thumbnail"
-                     alt=""
-                     srcset="https://www.tonyonsecurity.com/assets/pictures-80x80.jpg,
-                            https://www.tonyonsecurity.com/assets/pictures-160x160.jpg 2x"
-                     src="https://www.tonyonsecurity.com/assets/pictures-80x80.jpg"
+                     alt="Diagram of the CloudFlare WAF's components."
+                     srcset="https://www.tonyonsecurity.com/assets/pictures/2013/03/09/protect-your-website-vulnerabilities-with-a-waf-new-compairson-report-cloudflare-vs-incapsula-vs-modsecurity/cloudflare-waf-80x80.jpg,
+                            https://www.tonyonsecurity.com/assets/pictures/2013/03/09/protect-your-website-vulnerabilities-with-a-waf-new-compairson-report-cloudflare-vs-incapsula-vs-modsecurity/cloudflare-waf-160x160.jpg 2x"
+                     src="https://www.tonyonsecurity.com/assets/pictures/2013/03/09/protect-your-website-vulnerabilities-with-a-waf-new-compairson-report-cloudflare-vs-incapsula-vs-modsecurity/cloudflare-waf-80x80.jpg"
+                     loading="lazy"
                 />
                 <div class="description">
-                    <h3 class="category"></h3>
-                    <h4 class="title"></h4>
-                    <span class="meta"> views -  min read</span>
+                    <h3 class="category">FIREWALL</h3>
+                    <h4 class="title">Protect Your Website Vulnerabilities with CloudFlare</h4>
+                    <span class="meta">61 views - 3 min read</span>
                 </div>
             </div>
         </a>
 
-                    </div>
-                    <div class="post-item-outer"> <a href="https://www.tonyonsecurity.com">
+                </div>
+                <div class="post-item-outer"> <a href="https://www.tonyonsecurity.com/2012/10/16/2012-ncsa-symantec-national-small-business-cyber-security-study/">
             <div class="top-post-item featured-post">
                 <img class="thumbnail"
-                     alt=""
-                     srcset="https://www.tonyonsecurity.com/assets/pictures-80x80.jpg,
-                            https://www.tonyonsecurity.com/assets/pictures-160x160.jpg 2x"
-                     src="https://www.tonyonsecurity.com/assets/pictures-80x80.jpg"
+                     alt="'Stay safe online' written on a white background."
+                     srcset="https://www.tonyonsecurity.com/assets/pictures/2012/10/16/2012-ncsa-symantec-national-small-business-cyber-security-study/stay-safe-online-80x80.jpg,
+                            https://www.tonyonsecurity.com/assets/pictures/2012/10/16/2012-ncsa-symantec-national-small-business-cyber-security-study/stay-safe-online-160x160.jpg 2x"
+                     src="https://www.tonyonsecurity.com/assets/pictures/2012/10/16/2012-ncsa-symantec-national-small-business-cyber-security-study/stay-safe-online-80x80.jpg"
+                     loading="lazy"
                 />
                 <div class="description">
-                    <h3 class="category"></h3>
-                    <h4 class="title"></h4>
-                    <span class="meta"> views -  min read</span>
+                    <h3 class="category">REPORT</h3>
+                    <h4 class="title">Publication of a study on small business cybersecurity</h4>
+                    <span class="meta">162 views - 5 min read</span>
                 </div>
             </div>
         </a>
 
-                    </div>
-                    <div class="post-item-outer"> <a href="https://www.tonyonsecurity.com">
+                </div>
+                <div class="post-item-outer"> <a href="https://www.tonyonsecurity.com/2012/10/09/ossec-agent-to-server-connection-issues/">
             <div class="top-post-item featured-post">
                 <img class="thumbnail"
-                     alt=""
-                     srcset="https://www.tonyonsecurity.com/assets/pictures-80x80.jpg,
-                            https://www.tonyonsecurity.com/assets/pictures-160x160.jpg 2x"
-                     src="https://www.tonyonsecurity.com/assets/pictures-80x80.jpg"
+                     alt="OSSEC written on a white background."
+                     srcset="https://www.tonyonsecurity.com/assets/pictures/2012/10/09/ossec-agent-to-server-connection-issues/ossec-logo-80x80.jpg,
+                            https://www.tonyonsecurity.com/assets/pictures/2012/10/09/ossec-agent-to-server-connection-issues/ossec-logo-160x160.jpg 2x"
+                     src="https://www.tonyonsecurity.com/assets/pictures/2012/10/09/ossec-agent-to-server-connection-issues/ossec-logo-80x80.jpg"
+                     loading="lazy"
                 />
                 <div class="description">
-                    <h3 class="category"></h3>
-                    <h4 class="title"></h4>
-                    <span class="meta"> views -  min read</span>
+                    <h3 class="category">DETECTION</h3>
+                    <h4 class="title">OSSEC Agent to Server Connection Issues</h4>
+                    <span class="meta">91 views - 3 min read</span>
                 </div>
             </div>
         </a>
 
-                    </div>
-                    <div class="post-item-outer"> <a href="https://www.tonyonsecurity.com">
+                </div>
+                <div class="post-item-outer"> <a href="https://www.tonyonsecurity.com/2012/06/24/installing-wordpress-via-terminal-and-securing-the-server/">
             <div class="top-post-item featured-post">
                 <img class="thumbnail"
-                     alt=""
-                     srcset="https://www.tonyonsecurity.com/assets/pictures-80x80.jpg,
-                            https://www.tonyonsecurity.com/assets/pictures-160x160.jpg 2x"
-                     src="https://www.tonyonsecurity.com/assets/pictures-80x80.jpg"
+                     alt="White text with 'wordpress' on a blue background."
+                     srcset="https://www.tonyonsecurity.com/assets/pictures/2012/06/24/installing-wordpress-via-terminal-and-securing-the-server/wordpress-logo-80x80.jpg,
+                            https://www.tonyonsecurity.com/assets/pictures/2012/06/24/installing-wordpress-via-terminal-and-securing-the-server/wordpress-logo-160x160.jpg 2x"
+                     src="https://www.tonyonsecurity.com/assets/pictures/2012/06/24/installing-wordpress-via-terminal-and-securing-the-server/wordpress-logo-80x80.jpg"
+                     loading="lazy"
                 />
                 <div class="description">
-                    <h3 class="category"></h3>
-                    <h4 class="title"></h4>
-                    <span class="meta"> views -  min read</span>
+                    <h3 class="category">WORDPRESS</h3>
+                    <h4 class="title">Installing WordPress via Terminal and Securing The Server</h4>
+                    <span class="meta">246 views - 4 min read</span>
                 </div>
             </div>
         </a>
 
-                    </div>
-                    <div class="post-item-outer"> <a href="https://www.tonyonsecurity.com">
+                </div>
+                <div class="post-item-outer"> <a href="https://www.tonyonsecurity.com/2012/08/05/securing-your-data-on-dropbox-truecrypt/">
             <div class="top-post-item featured-post">
                 <img class="thumbnail"
-                     alt=""
-                     srcset="https://www.tonyonsecurity.com/assets/pictures-80x80.jpg,
-                            https://www.tonyonsecurity.com/assets/pictures-160x160.jpg 2x"
-                     src="https://www.tonyonsecurity.com/assets/pictures-80x80.jpg"
+                     alt="A picture stating: TrueCrypt, no evidence of backdoors."
+                     srcset="https://www.tonyonsecurity.com/assets/pictures/2012/08/05/securing-your-data-on-dropbox-truecrypt/truecrypt-security-audit-services-80x80.jpg,
+                            https://www.tonyonsecurity.com/assets/pictures/2012/08/05/securing-your-data-on-dropbox-truecrypt/truecrypt-security-audit-services-160x160.jpg 2x"
+                     src="https://www.tonyonsecurity.com/assets/pictures/2012/08/05/securing-your-data-on-dropbox-truecrypt/truecrypt-security-audit-services-80x80.jpg"
+                     loading="lazy"
                 />
                 <div class="description">
-                    <h3 class="category"></h3>
-                    <h4 class="title"></h4>
-                    <span class="meta"> views -  min read</span>
+                    <h3 class="category">CLOUD</h3>
+                    <h4 class="title">Using TrueCrypt to Secure Dropbox Data</h4>
+                    <span class="meta">53 views - 3 min read</span>
                 </div>
             </div>
         </a>
 
-                    </div>
-                    <div class="post-item-outer"> <a href="https://www.tonyonsecurity.com">
-            <div class="top-post-item featured-post">
-                <img class="thumbnail"
-                     alt=""
-                     srcset="https://www.tonyonsecurity.com/assets/pictures-80x80.jpg,
-                            https://www.tonyonsecurity.com/assets/pictures-160x160.jpg 2x"
-                     src="https://www.tonyonsecurity.com/assets/pictures-80x80.jpg"
-                />
-                <div class="description">
-                    <h3 class="category"></h3>
-                    <h4 class="title"></h4>
-                    <span class="meta"> views -  min read</span>
                 </div>
-            </div>
-        </a>
+            </nav>
+        </div>
+        <aside class="site-footer-outer">
+            <footer class="site-footer">
+                <div class="footer-logo"> <span style="font-weight: 700">tony</span><span style="font-weight: 400">security</span>
+                    <span
+                    style="font-weight: 700" class="logo-line">|</span>
+                </div>
+                <div class="footer-copyright"> <span><a href="https://www.tonyonsecurity.com/sitemap.xml">sitemap</a></span> | <span><a href="mailto:info@tonyonsecurity.com">email</a></span>
+| <span><a href="https://twitter.com/@tonyonsecur1ty">twitter</a></span>
 
-                    </div>
-                </nav>
-            </div>
-            <aside class="site-footer-outer">
-                <footer class="site-footer">
-                    <div class="footer-logo"> <span style="font-weight: 700">tony</span><span style="font-weight: 400">security</span>
-                        <span
-                        style="font-weight: 700" class="logo-line">|</span>
-                    </div>
-                    <div class="footer-copyright"> <span><a href="https://www.tonyonsecurity.com/sitemap.xml">sitemap</a></span> | <span><a href="mailto:info@tonyonsecurity.com">email</a></span> | <span><a href="https://twitter.com/@tonyonsecur1ty">twitter</a></span>
-
-                    </div>
-                </footer>
-            </aside>
+                </div>
+            </footer>
+        </aside>
         </div>
         <script defer src="https://www.tonyonsecurity.com/assets/js/main.js"></script>
     </body>

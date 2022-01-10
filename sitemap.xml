@@ -2,37 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://www.tonyonsecurity.com/</loc>
-        <lastmod>2021-08-17</lastmod>
+        <lastmod>2022-01-10</lastmod>
         <changefreq>daily</changefreq>
     </url>
     <url>
         <loc>https://www.tonyonsecurity.com/blog/</loc>
-        <lastmod>2021-08-17</lastmod>
+        <lastmod>2021-08-05</lastmod>
         <changefreq>daily</changefreq>
     </url>
     <url>
         <loc>https://www.tonyonsecurity.com/about/</loc>
-        <lastmod>2021-08-17</lastmod>
+        <lastmod>2021-08-04</lastmod>
         <changefreq>daily</changefreq>
     </url>
     <url>
         <loc>https://www.tonyonsecurity.com/2012/06/24/installing-wordpress-via-terminal-and-securing-the-server/</loc>
-        <lastmod>2021-08-17</lastmod>
+        <lastmod>2021-08-04</lastmod>
         <changefreq>daily</changefreq>
     </url>
     <url>
         <loc>https://www.tonyonsecurity.com/2012/08/05/securing-your-data-on-dropbox-truecrypt/</loc>
-        <lastmod>2021-08-17</lastmod>
+        <lastmod>2021-08-04</lastmod>
         <changefreq>daily</changefreq>
     </url>
     <url>
         <loc>https://www.tonyonsecurity.com/2012/06/28/security-hole-found-keepass-password-manager/</loc>
-        <lastmod>2021-08-17</lastmod>
+        <lastmod>2021-08-04</lastmod>
         <changefreq>daily</changefreq>
     </url>
     <url>
         <loc>https://www.tonyonsecurity.com/2013/03/13/ossec-for-website-security-part-i/</loc>
-        <lastmod>2021-08-17</lastmod>
+        <lastmod>2021-08-05</lastmod>
         <changefreq>daily</changefreq>
     </url>
     <url>
@@ -42,23 +42,23 @@
     </url>
     <url>
         <loc>https://www.tonyonsecurity.com/2012/10/16/2012-ncsa-symantec-national-small-business-cyber-security-study/</loc>
-        <lastmod>2021-08-17</lastmod>
+        <lastmod>2021-08-05</lastmod>
         <changefreq>daily</changefreq>
     </url>
     <url>
         <loc>https://www.tonyonsecurity.com/2012/10/09/ossec-agent-to-server-connection-issues/</loc>
-        <lastmod>2021-08-17</lastmod>
+        <lastmod>2021-08-05</lastmod>
         <changefreq>daily</changefreq>
     </url>
 
     <url>
         <loc>https://www.tonyonsecurity.com/2014/11/07/how-hosts-manage-your-website-security/</loc>
-        <lastmod>2021-08-17</lastmod>
+        <lastmod>2021-08-06</lastmod>
         <changefreq>daily</changefreq>
     </url>
     <url>
         <loc>https://www.tonyonsecurity.com/2014/08/17/importance-of-updates-in-website-security/</loc>
-        <lastmod>2021-08-17</lastmod>
+        <lastmod>2021-08-06</lastmod>
         <changefreq>daily</changefreq>
     </url>
 </urlset>

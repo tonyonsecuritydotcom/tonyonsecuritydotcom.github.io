@@ -24,6 +24,7 @@
             <meta name="twitter:card" content="summary_large_image">
             <meta name="twitter:creator" content="@tonyonsecur1ty">
             <meta name="twitter:site" content="@tonyonsecur1ty">
+            <meta name="twitter:title" content="Protect Your Website Vulnerabilities with CloudFlare WAF">
             <script async src="https://www.googletagmanager.com/gtag/js?id=UA-170847243-6"></script>
             <script>
                 window.dataLayer = window.dataLayer || [];
@@ -76,7 +77,7 @@
                 }
                 body {
                   font-family: sans-serif;
-                  letter-spacing: 0.5px;
+                  letter-spacing: 0.4px;
                 }
                 .fonts-loaded body {
                   font-family: "Inter", sans-serif;
@@ -207,6 +208,14 @@
                   font-weight: 700;
                 }
                 
+                .important-box p:first-child,
+                .light-box p:first-child,
+                .important-box h3:first-child,
+                .light-box h3:first-child
+                {
+                    margin-top: 0;
+                }
+                
                 .important-box p:last-child,
                 .light-box p:last-child
                 {
@@ -220,8 +229,8 @@
                   list-style: none;
                 }
                 .post-body ul li::before {
-                  color: #007aff;
-                  content: "•";
+                  margin-right: 6px;
+                  margin-left: -12px;
                 }
                 /*** Main / Special contexts */
                 .important-box {
@@ -542,7 +551,10 @@
                   margin: 32px;
                 }
                 .post-body ul li::before {
-                  margin-right: 16px;
+                  color: #007aff;
+                  content: "•";
+                  margin-left: -28px;
+                  margin-right: 18px;
                 }
                 .post-body ul li {
                   font-size: 17px;
@@ -569,13 +581,14 @@
                 }
                 .toc li {
                   font-size: 13px;
-                  line-height: 16px;
+                  line-height: 17px;
                   list-style: none;
                   overflow: hidden;
                   padding: 4px 0;
                 }
                 .toc li a {
                   text-decoration: none;
+                  letter-spacing: 0.25px;
                 }
                 .toc li.selected {
                   font-weight: bold;
@@ -583,6 +596,7 @@
                 }
                 .toc li.selected a {
                   color: #007aff;
+                  letter-spacing: 0px;
                 }
                 .toc li.h1 {
                   padding-left: 8px;
@@ -770,7 +784,7 @@
                             "@type": "ListItem",
                             "position": 1,
                             "name": "Tony On Security",
-                            "item": "https://www.tonyonsecurity.com//"
+                            "item": "https://www.tonyonsecurity.com/"
             
                                         },
             
@@ -778,7 +792,7 @@
                             "@type": "ListItem",
                             "position": 2,
                             "name": "Blog",
-                            "item": "https://www.tonyonsecurity.com/blog/"
+                            "item": "https://www.tonyonsecurity.com/blog"
             
                                         },
             
@@ -873,10 +887,12 @@
                         entries.forEach(entry => {
                           const id = entry.target.getAttribute('id');
                           const elements = document.querySelector(`nav ul li a[href="#${id}"]`);
-                          if (entry.intersectionRatio > 0) {
-                            elements.parentElement.classList.add('selected');
-                          } else {
-                            elements.parentElement.classList.remove('selected');
+                          if (elements) {
+                              if (entry.intersectionRatio > 0) {
+                                elements.parentElement.classList.add('selected');
+                              } else {
+                                elements.parentElement.classList.remove('selected');
+                              }
                           }
                         });
                       });
@@ -924,30 +940,32 @@
                                     <p>Protect your business-critical web applications against harmful assaults
                                         with this intelligent, integrated, and scalable solution, which requires
                                         no changes to your existing architecture.</p>
-                                    <aside>
-                                        <figure class="full-width-figure  featured">
-                                            <picture>
-                                                <source type="image/webp" srcset="
+                                    <div id="featured-img">
+                                        <aside>
+                                            <figure class="full-width-figure  featured">
+                                                <picture>
+                                                    <source type="image/webp" srcset="
               https://www.tonyonsecurity.com/assets/pictures/2013/03/09/protect-your-website-vulnerabilities-with-a-waf-new-compairson-report-cloudflare-vs-incapsula-vs-modsecurity/cloudflare-waf-800.webp 800w,
               https://www.tonyonsecurity.com/assets/pictures/2013/03/09/protect-your-website-vulnerabilities-with-a-waf-new-compairson-report-cloudflare-vs-incapsula-vs-modsecurity/cloudflare-waf-1200.webp 1200w,
               https://www.tonyonsecurity.com/assets/pictures/2013/03/09/protect-your-website-vulnerabilities-with-a-waf-new-compairson-report-cloudflare-vs-incapsula-vs-modsecurity/cloudflare-waf-1600.webp 1600w"
-                                                sizes="
+                                                    sizes="
               (max-width: 800px) 100vw,
               800px" />
-                                                <source type="image/jpeg" srcset="
+                                                    <source type="image/jpeg" srcset="
               https://www.tonyonsecurity.com/assets/pictures/2013/03/09/protect-your-website-vulnerabilities-with-a-waf-new-compairson-report-cloudflare-vs-incapsula-vs-modsecurity/cloudflare-waf-800.jpg 800w,
               https://www.tonyonsecurity.com/assets/pictures/2013/03/09/protect-your-website-vulnerabilities-with-a-waf-new-compairson-report-cloudflare-vs-incapsula-vs-modsecurity/cloudflare-waf-1200.jpg 1200w,
               https://www.tonyonsecurity.com/assets/pictures/2013/03/09/protect-your-website-vulnerabilities-with-a-waf-new-compairson-report-cloudflare-vs-incapsula-vs-modsecurity/cloudflare-waf-1600.jpg 1600w"
-                                                sizes="
+                                                    sizes="
               (max-width: 800px) 100vw,
               800px" />
-                                                <img src="https://www.tonyonsecurity.com/assets/pictures/2013/03/09/protect-your-website-vulnerabilities-with-a-waf-new-compairson-report-cloudflare-vs-incapsula-vs-modsecurity/cloudflare-waf-800.jpg"
-                                                alt="Diagram of the CloudFlare WAF's components." />
-                                            </picture>
-                                            <figcaption>Picture from <a href="https://www.cloudflare.com/en-gb/waf/" rel="nofollow">CloudFlare</a>
-                                            </figcaption>
-                                        </figure>
-                                    </aside>
+                                                    <img src="https://www.tonyonsecurity.com/assets/pictures/2013/03/09/protect-your-website-vulnerabilities-with-a-waf-new-compairson-report-cloudflare-vs-incapsula-vs-modsecurity/cloudflare-waf-800.jpg"
+                                                    alt="Diagram of the CloudFlare WAF's components." />
+                                                </picture>
+                                                <figcaption>Picture from <a href="https://www.cloudflare.com/en-gb/waf/" rel="nofollow">CloudFlare</a>
+                                                </figcaption>
+                                            </figure>
+                                        </aside>
+                                    </div>
                                     
 <h2 id="what-is-a-waf">What is a WAF</h2>
 
@@ -978,154 +996,145 @@
                 <nav class="post-items">
                      <h3>Top posts</h3>
 
-                    <div class="post-item-outer"> <a href="https://www.tonyonsecurity.com">
+                    <div class="post-item-outer"> <a href="https://www.tonyonsecurity.com/2013/03/13/ossec-for-website-security-part-i/">
             <div class="top-post-item featured-post">
                 <img class="thumbnail"
-                    alt=""
-                    srcset="https://www.tonyonsecurity.com/assets/pictures-80x80.jpg,
-                            https://www.tonyonsecurity.com/assets/pictures-160x160.jpg 2x"
-                       src="https://www.tonyonsecurity.com/assets/pictures-80x80.jpg"
+                    alt="OSSEC written on a white background."
+                    srcset="https://www.tonyonsecurity.com/assets/pictures/2013/03/13/ossec-for-website-security-part-i/ossec-logo-80x80.jpg,
+                            https://www.tonyonsecurity.com/assets/pictures/2013/03/13/ossec-for-website-security-part-i/ossec-logo-160x160.jpg 2x"
+                    src="https://www.tonyonsecurity.com/assets/pictures/2013/03/13/ossec-for-website-security-part-i/ossec-logo-80x80.jpg"
+                    loading="lazy"
                 />
                 <div class="description">
-                    <h3 class="category"></h3>
-                    <h4 class="title"></h4>
-                    <span class="meta"> views -  min read</span>
+                    <h3 class="category">DETECTION</h3>
+                    <h4 class="title">OSSEC for Website Security</h4>
+                    <span class="meta">247 views - 5 min read</span>
                 </div>
             </div>
         </a>
 
                     </div>
-                    <div class="post-item-outer"> <a href="https://www.tonyonsecurity.com">
+                    <div class="post-item-outer"> <a href="https://www.tonyonsecurity.com/2014/11/07/how-hosts-manage-your-website-security/">
             <div class="top-post-item featured-post">
                 <img class="thumbnail"
-                     alt=""
-                     srcset="https://www.tonyonsecurity.com/assets/pictures-80x80.jpg,
-                            https://www.tonyonsecurity.com/assets/pictures-160x160.jpg 2x"
-                     src="https://www.tonyonsecurity.com/assets/pictures-80x80.jpg"
+                     alt="A person using a laptop with gloves on."
+                     srcset="https://www.tonyonsecurity.com/assets/pictures/2014/11/07/how-hosts-manage-your-website-security/using-laptop-with-gloves-80x80.jpg,
+                            https://www.tonyonsecurity.com/assets/pictures/2014/11/07/how-hosts-manage-your-website-security/using-laptop-with-gloves-160x160.jpg 2x"
+                     src="https://www.tonyonsecurity.com/assets/pictures/2014/11/07/how-hosts-manage-your-website-security/using-laptop-with-gloves-80x80.jpg"
+                     loading="lazy"
                 />
                 <div class="description">
-                    <h3 class="category"></h3>
-                    <h4 class="title"></h4>
-                    <span class="meta"> views -  min read</span>
+                    <h3 class="category">SECURITY</h3>
+                    <h4 class="title">How Hosts Manage Your Website Security</h4>
+                    <span class="meta">121 views - 4 min read</span>
                 </div>
             </div>
         </a>
 
                     </div>
-                    <div class="post-item-outer"> <a href="https://www.tonyonsecurity.com">
+                    <div class="post-item-outer"> <a href="https://www.tonyonsecurity.com/2014/08/17/importance-of-updates-in-website-security/">
             <div class="top-post-item featured-post">
                 <img class="thumbnail"
-                     alt=""
-                     srcset="https://www.tonyonsecurity.com/assets/pictures-80x80.jpg,
-                            https://www.tonyonsecurity.com/assets/pictures-160x160.jpg 2x"
-                     src="https://www.tonyonsecurity.com/assets/pictures-80x80.jpg"
+                     alt="A laptop is running it's updates."
+                     srcset="https://www.tonyonsecurity.com/assets/pictures/2014/08/17/importance-of-updates-in-website-security/laptop-updating-itself-80x80.jpg,
+                            https://www.tonyonsecurity.com/assets/pictures/2014/08/17/importance-of-updates-in-website-security/laptop-updating-itself-160x160.jpg 2x"
+                     src="https://www.tonyonsecurity.com/assets/pictures/2014/08/17/importance-of-updates-in-website-security/laptop-updating-itself-80x80.jpg"
+                     loading="lazy"
                 />
                 <div class="description">
-                    <h3 class="category"></h3>
-                    <h4 class="title"></h4>
-                    <span class="meta"> views -  min read</span>
+                    <h3 class="category">SECURITY</h3>
+                    <h4 class="title">Importance of Updates in Website Security</h4>
+                    <span class="meta">34 views - 4 min read</span>
                 </div>
             </div>
         </a>
 
                     </div>
-                    <div class="post-item-outer"> <a href="https://www.tonyonsecurity.com">
+                    <div class="post-item-outer"> <a href="https://www.tonyonsecurity.com/2012/10/16/2012-ncsa-symantec-national-small-business-cyber-security-study/">
             <div class="top-post-item featured-post">
                 <img class="thumbnail"
-                     alt=""
-                     srcset="https://www.tonyonsecurity.com/assets/pictures-80x80.jpg,
-                            https://www.tonyonsecurity.com/assets/pictures-160x160.jpg 2x"
-                     src="https://www.tonyonsecurity.com/assets/pictures-80x80.jpg"
+                     alt="'Stay safe online' written on a white background."
+                     srcset="https://www.tonyonsecurity.com/assets/pictures/2012/10/16/2012-ncsa-symantec-national-small-business-cyber-security-study/stay-safe-online-80x80.jpg,
+                            https://www.tonyonsecurity.com/assets/pictures/2012/10/16/2012-ncsa-symantec-national-small-business-cyber-security-study/stay-safe-online-160x160.jpg 2x"
+                     src="https://www.tonyonsecurity.com/assets/pictures/2012/10/16/2012-ncsa-symantec-national-small-business-cyber-security-study/stay-safe-online-80x80.jpg"
+                     loading="lazy"
                 />
                 <div class="description">
-                    <h3 class="category"></h3>
-                    <h4 class="title"></h4>
-                    <span class="meta"> views -  min read</span>
+                    <h3 class="category">REPORT</h3>
+                    <h4 class="title">Publication of a study on small business cybersecurity</h4>
+                    <span class="meta">162 views - 5 min read</span>
                 </div>
             </div>
         </a>
 
                     </div>
-                    <div class="post-item-outer"> <a href="https://www.tonyonsecurity.com">
+                    <div class="post-item-outer"> <a href="https://www.tonyonsecurity.com/2012/10/09/ossec-agent-to-server-connection-issues/">
             <div class="top-post-item featured-post">
                 <img class="thumbnail"
-                     alt=""
-                     srcset="https://www.tonyonsecurity.com/assets/pictures-80x80.jpg,
-                            https://www.tonyonsecurity.com/assets/pictures-160x160.jpg 2x"
-                     src="https://www.tonyonsecurity.com/assets/pictures-80x80.jpg"
+                     alt="OSSEC written on a white background."
+                     srcset="https://www.tonyonsecurity.com/assets/pictures/2012/10/09/ossec-agent-to-server-connection-issues/ossec-logo-80x80.jpg,
+                            https://www.tonyonsecurity.com/assets/pictures/2012/10/09/ossec-agent-to-server-connection-issues/ossec-logo-160x160.jpg 2x"
+                     src="https://www.tonyonsecurity.com/assets/pictures/2012/10/09/ossec-agent-to-server-connection-issues/ossec-logo-80x80.jpg"
+                     loading="lazy"
                 />
                 <div class="description">
-                    <h3 class="category"></h3>
-                    <h4 class="title"></h4>
-                    <span class="meta"> views -  min read</span>
+                    <h3 class="category">DETECTION</h3>
+                    <h4 class="title">OSSEC Agent to Server Connection Issues</h4>
+                    <span class="meta">91 views - 3 min read</span>
                 </div>
             </div>
         </a>
 
                     </div>
-                    <div class="post-item-outer"> <a href="https://www.tonyonsecurity.com">
+                    <div class="post-item-outer"> <a href="https://www.tonyonsecurity.com/2012/06/24/installing-wordpress-via-terminal-and-securing-the-server/">
             <div class="top-post-item featured-post">
                 <img class="thumbnail"
-                     alt=""
-                     srcset="https://www.tonyonsecurity.com/assets/pictures-80x80.jpg,
-                            https://www.tonyonsecurity.com/assets/pictures-160x160.jpg 2x"
-                     src="https://www.tonyonsecurity.com/assets/pictures-80x80.jpg"
+                     alt="White text with 'wordpress' on a blue background."
+                     srcset="https://www.tonyonsecurity.com/assets/pictures/2012/06/24/installing-wordpress-via-terminal-and-securing-the-server/wordpress-logo-80x80.jpg,
+                            https://www.tonyonsecurity.com/assets/pictures/2012/06/24/installing-wordpress-via-terminal-and-securing-the-server/wordpress-logo-160x160.jpg 2x"
+                     src="https://www.tonyonsecurity.com/assets/pictures/2012/06/24/installing-wordpress-via-terminal-and-securing-the-server/wordpress-logo-80x80.jpg"
+                     loading="lazy"
                 />
                 <div class="description">
-                    <h3 class="category"></h3>
-                    <h4 class="title"></h4>
-                    <span class="meta"> views -  min read</span>
+                    <h3 class="category">WORDPRESS</h3>
+                    <h4 class="title">Installing WordPress via Terminal and Securing The Server</h4>
+                    <span class="meta">246 views - 4 min read</span>
                 </div>
             </div>
         </a>
 
                     </div>
-                    <div class="post-item-outer"> <a href="https://www.tonyonsecurity.com">
+                    <div class="post-item-outer"> <a href="https://www.tonyonsecurity.com/2012/06/28/security-hole-found-keepass-password-manager/">
             <div class="top-post-item featured-post">
                 <img class="thumbnail"
-                     alt=""
-                     srcset="https://www.tonyonsecurity.com/assets/pictures-80x80.jpg,
-                            https://www.tonyonsecurity.com/assets/pictures-160x160.jpg 2x"
-                     src="https://www.tonyonsecurity.com/assets/pictures-80x80.jpg"
+                     alt="A drawn lock in a circle."
+                     srcset="https://www.tonyonsecurity.com/assets/pictures/2012/06/28/security-hole-found-keepass-password-manager/keepass-logo-80x80.jpg,
+                            https://www.tonyonsecurity.com/assets/pictures/2012/06/28/security-hole-found-keepass-password-manager/keepass-logo-160x160.jpg 2x"
+                     src="https://www.tonyonsecurity.com/assets/pictures/2012/06/28/security-hole-found-keepass-password-manager/keepass-logo-80x80.jpg"
+                     loading="lazy"
                 />
                 <div class="description">
-                    <h3 class="category"></h3>
-                    <h4 class="title"></h4>
-                    <span class="meta"> views -  min read</span>
+                    <h3 class="category">VULNERABILITY</h3>
+                    <h4 class="title">Researcher alerts the public to KeePass's security flaw</h4>
+                    <span class="meta">281 views - 4 min read</span>
                 </div>
             </div>
         </a>
 
                     </div>
-                    <div class="post-item-outer"> <a href="https://www.tonyonsecurity.com">
+                    <div class="post-item-outer"> <a href="https://www.tonyonsecurity.com/2012/08/05/securing-your-data-on-dropbox-truecrypt/">
             <div class="top-post-item featured-post">
                 <img class="thumbnail"
-                     alt=""
-                     srcset="https://www.tonyonsecurity.com/assets/pictures-80x80.jpg,
-                            https://www.tonyonsecurity.com/assets/pictures-160x160.jpg 2x"
-                     src="https://www.tonyonsecurity.com/assets/pictures-80x80.jpg"
+                     alt="A picture stating: TrueCrypt, no evidence of backdoors."
+                     srcset="https://www.tonyonsecurity.com/assets/pictures/2012/08/05/securing-your-data-on-dropbox-truecrypt/truecrypt-security-audit-services-80x80.jpg,
+                            https://www.tonyonsecurity.com/assets/pictures/2012/08/05/securing-your-data-on-dropbox-truecrypt/truecrypt-security-audit-services-160x160.jpg 2x"
+                     src="https://www.tonyonsecurity.com/assets/pictures/2012/08/05/securing-your-data-on-dropbox-truecrypt/truecrypt-security-audit-services-80x80.jpg"
+                     loading="lazy"
                 />
                 <div class="description">
-                    <h3 class="category"></h3>
-                    <h4 class="title"></h4>
-                    <span class="meta"> views -  min read</span>
-                </div>
-            </div>
-        </a>
-
-                    </div>
-                    <div class="post-item-outer"> <a href="https://www.tonyonsecurity.com">
-            <div class="top-post-item featured-post">
-                <img class="thumbnail"
-                     alt=""
-                     srcset="https://www.tonyonsecurity.com/assets/pictures-80x80.jpg,
-                            https://www.tonyonsecurity.com/assets/pictures-160x160.jpg 2x"
-                     src="https://www.tonyonsecurity.com/assets/pictures-80x80.jpg"
-                />
-                <div class="description">
-                    <h3 class="category"></h3>
-                    <h4 class="title"></h4>
-                    <span class="meta"> views -  min read</span>
+                    <h3 class="category">CLOUD</h3>
+                    <h4 class="title">Using TrueCrypt to Secure Dropbox Data</h4>
+                    <span class="meta">53 views - 3 min read</span>
                 </div>
             </div>
         </a>
@@ -1139,7 +1148,8 @@
                         <span
                         style="font-weight: 700" class="logo-line">|</span>
                     </div>
-                    <div class="footer-copyright"> <span><a href="https://www.tonyonsecurity.com/sitemap.xml">sitemap</a></span> | <span><a href="mailto:info@tonyonsecurity.com">email</a></span> | <span><a href="https://twitter.com/@tonyonsecur1ty">twitter</a></span>
+                    <div class="footer-copyright"> <span><a href="https://www.tonyonsecurity.com/sitemap.xml">sitemap</a></span> | <span><a href="mailto:info@tonyonsecurity.com">email</a></span>
+| <span><a href="https://twitter.com/@tonyonsecur1ty">twitter</a></span>
 
                     </div>
                 </footer>
